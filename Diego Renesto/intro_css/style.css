@@ -1,0 +1,36 @@
+body {
+    background-color: white;
+}
+
+h1 {
+    color: white;
+    font-family: verdana, arial;
+    font-size: 30px;
+}
+
+p {
+    color: white;
+    font-family: verdana, arial;
+    font-size: 23px;
+}
+
+.text {
+    color: black;
+}
+
+.text2 {
+    color: blue;
+}
+
+header {
+    background-color: rgb(108, 108, 195);
+}
+
+#p1 {
+    margin-left: 100px;
+}
+
+h4 {
+    font-size: 30px;
+    text-align: center;
+}
