@@ -1,0 +1,44 @@
+/* Selettore di tag */
+p {
+    background-color: yellow;
+    color: black;
+}
+
+/* Selettore di UN UNICO tag */
+#my_p {
+    background-color: aqua;
+    color: blue;
+}
+
+/* Selettore di classe */
+.classTestCSS {
+    background-color: blueviolet;
+    color: beige;
+}
+
+span {
+    background-color: crimson;
+}
+
+h4 span {
+    background-color: green;
+}
+
+h4 span span {
+    background-color: yellow;
+}
+
+div {
+    border: 2px solid;
+    border-color: black;
+    padding: 30px;
+    margin: 50px;
+    margin-bottom: 150px;
+}
+
+#boxModelID {
+    border: 30px;
+    color: lightblue;
+    padding: 60px;
+    margin-top: 40px;
+}
