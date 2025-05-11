@@ -1,9 +1,232 @@
-body,
-html {
-  margin: 0;
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Raleway:wght@300;400;600&display=swap");
+
+* {
   padding: 0;
+  margin: 0;
+  box-sizing: border-box;
   font-family: "Raleway", sans-serif;
-  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+header {
   width: 100%;
-  overflow-x: hidden;
+  background-color: transparent;
+}
+
+.navbar {
+  max-width: 220rem;
+  padding-inline: 2.8rem;
+  height: 10rem;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar.scrolled {
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+}
+
+.logo {
+  height: 3.2rem;
+  width: auto;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  height: 10rem;
+  gap: 4rem;
+  list-style: none;
+}
+
+.navigation li a {
+  font-size: 1.8rem;
+  color: white;
+  text-decoration: none;
+}
+
+.navigation .btn {
+  font-size: 1.8rem;
+  color: white;
+  padding-inline: 2rem;
+  padding-block: 1rem;
+  border-radius: 4rem;
+  background-color: #e2b144;
+  border: none;
+  color: black;
+  cursor: pointer;
+}
+
+.dropdown {
+  height: 10rem;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.dropdown .resources {
+  display: flex;
+  height: -moz-fit-content;
+  height: fit-content;
+  align-items: center;
+  gap: 1.2rem;
+  cursor: pointer;
+}
+
+.dropdown .resources p {
+  font-size: 1.8rem;
+  color: white;
+}
+
+.dropdown .resources img {
+  height: 0.8rem;
+  width: auto;
+}
+
+.dropdown .dropdown-list-wrapper {
+  position: absolute;
+  top: 100%;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+.dropdown .dropdown-list-wrapper .dropdown-list {
+  background-color: transparent;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown .dropdown-list-wrapper .dropdown-list li a {
+  display: block;
+  line-height: 6rem;
+  padding-inline: 4rem;
+}
+
+.dropdown .dropdown-list-wrapper .dropdown-list li a:hover {
+  background-color: transparent;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-btn {
+  display: none;
+  height: 4rem;
+  aspect-ratio: 1/1;
+  border: none;
+  background-color: transparent;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.menu-btn img {
+  width: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 60%;
+  }
+  .navigation-wrapper {
+    top: 100%;
+    left: 0;
+    position: absolute;
+    overflow: hidden;
+    height: 0;
+    width: 100%;
+    transition: height 0.3s ease;
+  }
+  .navbar {
+    position: relative;
+  }
+  .navbar .navigation {
+    width: 100%;
+    height: auto;
+    gap: 0;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+    background-color: #4a4a6a;
+  }
+  .navbar .navigation li {
+    width: 100%;
+  }
+  .navbar .navigation li a {
+    display: block;
+    width: 100%;
+    line-height: 6rem;
+  }
+  .navbar .navigation li a:hover {
+    background-color: #545479;
+  }
+  .navbar .navigation .btn {
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+  }
+  .dropdown {
+    height: -moz-fit-content;
+    height: fit-content;
+    flex-direction: column;
+    width: 100%;
+  }
+  .dropdown .resources {
+    width: 100%;
+    justify-content: center;
+  }
+  .dropdown .resources p {
+    line-height: 6rem;
+  }
+  .dropdown .dropdown-list-wrapper {
+    position: relative;
+    width: 100%;
+    align-items: center;
+  }
+  .dropdown .dropdown-list-wrapper .dropdown-list {
+    padding-bottom: 0;
+  }
+  .menu-btn {
+    display: flex;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+.nav_link {
+  font-family: "Cinzel", serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  padding: 0.5rem 1rem;
+}
+
+.nav_link:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #e2b144;
+  transition: width 0.3s;
+}
+
+.nav_link:hover:after {
+  width: 80%;
 }

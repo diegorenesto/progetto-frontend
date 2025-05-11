@@ -8,8 +8,8 @@ const dropdown = document.querySelector(".dropdown");
 const dropdownBtn = document.querySelector(".resources");
 const dropdownWrapper = dropdown.querySelector(".dropdown-list-wrapper");
 
-let menuOpen = false; 
-let dropdownOpen = false; 
+let menuOpen = false;
+let dropdownOpen = false;
 
 // Toggle mobile menu
 menuBtn.addEventListener("click", () => {
@@ -53,7 +53,7 @@ dropdown.addEventListener("mouseleave", () => {
 
 // Reset styles on viewport resize
 window.addEventListener("resize", () => {
-    if (window.innerWidth > 991) { 
+    if (window.innerWidth > 991) {
         // Desktop view
         navigationWrapper.style.height = ""; // Remove inline height styling
         dropdownWrapper.style.height = ""; // Remove inline height styling
@@ -66,6 +66,3 @@ window.addEventListener("resize", () => {
         }
     }
 });
-
-
-
