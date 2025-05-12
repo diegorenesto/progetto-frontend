@@ -1,43 +1,25 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Animazione background
-    const immagineSfondo = document.querySelector('.background-image');
-    immagineSfondo.onload = function() {
-        immagineSfondo.classList.add('loaded');
-    };
+// scroll effect
+window.addEventListener("scroll", function () {
+  const navbar = document.querySelector(".navbar");
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
+// funzionalità del burger menu
+const burger = document.getElementById("burger");
+const navLinks = document.getElementById("navLinks");
 
-    // Animazione hero section
-    setTimeout(() => {
-        document.querySelector('.hero-section').classList.add('visible');
-        document.querySelector('.hero-title').style.opacity = '1';
-        document.querySelector('.hero-title').style.transform = 'translateY(0)';
-        document.querySelector('.hero-text').style.opacity = '1';
-        document.querySelector('.hero-text').style.transform = 'translateY(0)';
-    }, 300);
+burger.addEventListener("click", function () {
+  navLinks.classList.toggle("active");
+  burger.classList.toggle("toggle");
+});
 
-    // Animazione sezioni al scroll
-    function animateOnScroll() {
-        const sections = document.querySelectorAll('.content-section, .timeline-item');
-        const windowHeight = window.innerHeight;
-        const triggerPoint = windowHeight * 0.8;
-
-        sections.forEach(section => {
-            const sectionTop = section.getBoundingClientRect().top;
-
-            if (sectionTop < triggerPoint) {
-                section.classList.add('visible');
-            }
-        });
-    }
-
-    animateOnScroll();
-    window.addEventListener('scroll', animateOnScroll);
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
+// chiude il menu al click su un link
+document.querySelectorAll(".nav-link").forEach((link) => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+    burger.classList.remove("toggle");
+  });
 });
