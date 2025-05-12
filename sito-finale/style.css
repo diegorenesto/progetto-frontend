@@ -140,6 +140,7 @@ header {
   html {
     font-size: 60%;
   }
+
   .navigation-wrapper {
     top: 100%;
     left: 0;
@@ -149,9 +150,11 @@ header {
     width: 100%;
     transition: height 0.3s ease;
   }
+
   .navbar {
     position: relative;
   }
+
   .navbar .navigation {
     width: 100%;
     height: auto;
@@ -160,46 +163,57 @@ header {
     text-align: center;
     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
   }
+
   .navbar .navigation li {
     width: 100%;
   }
+
   .navbar .navigation li a {
     display: block;
     width: 100%;
     line-height: 6rem;
   }
+
   .navbar .navigation li a:hover {
     background-color: transparent;
   }
+
   .navbar .navigation .btn {
     margin-top: 2rem;
     margin-bottom: 6rem;
   }
+
   .dropdown {
     height: -moz-fit-content;
     height: fit-content;
     flex-direction: column;
     width: 100%;
   }
+
   .dropdown .resources {
     width: 100%;
     justify-content: center;
   }
+
   .dropdown .resources p {
     line-height: 6rem;
   }
+
   .dropdown .dropdown-list-wrapper {
     position: relative;
     width: 100%;
     align-items: center;
   }
+
   .dropdown .dropdown-list-wrapper .dropdown-list {
     padding-bottom: 0;
   }
+
   .menu-btn {
     display: flex;
   }
 }
+
 @media (max-width: 450px) {
   html {
     font-size: 55%;
@@ -228,4 +242,16 @@ header {
 
 .nav_link:hover:after {
   width: 80%;
+}
+
+#background_video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
 }
