@@ -159,7 +159,6 @@ header {
     flex-direction: column;
     text-align: center;
     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
-    background-color: #4a4a6a;
   }
   .navbar .navigation li {
     width: 100%;
@@ -170,7 +169,7 @@ header {
     line-height: 6rem;
   }
   .navbar .navigation li a:hover {
-    background-color: #545479;
+    background-color: transparent;
   }
   .navbar .navigation .btn {
     margin-top: 2rem;
