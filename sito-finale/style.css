@@ -18,7 +18,7 @@ body {
 }
 
 .section {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   position: relative;
   display: flex;
@@ -29,6 +29,7 @@ body {
   background-repeat: no-repeat;
   color: white;
   overflow: hidden;
+  padding: 8rem 0;
 }
 
 .dark-section {
@@ -41,6 +42,7 @@ body {
   padding: 2rem;
   position: relative;
   z-index: 2;
+  width: 100%;
 }
 
 .text-center {
@@ -519,24 +521,64 @@ body {
 
   .grid-container {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
   .card-container {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
   .personaggi-container {
     grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .section-title {
+    font-size: 3.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .content-title {
+    font-size: 2rem;
+  }
+
+  .content-text {
+    font-size: 1.5rem;
+  }
+
+  .card-title {
+    font-size: 1.8rem;
+  }
+
+  .card-text {
+    font-size: 1.4rem;
+  }
+
+  .personaggio-name {
+    font-size: 1.8rem;
+  }
+
+  .personaggio-desc {
+    font-size: 1.4rem;
+  }
+
+  .image-container {
+    height: 200px;
   }
 }
 
 @media screen and (max-width: 768px) {
+  .section {
+    padding: 6rem 0;
+  }
+
   .hero-title {
     font-size: 3.5rem;
   }
 
   .section-title {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
   }
 
   .personaggi-container {
@@ -550,9 +592,57 @@ body {
   .media-container iframe {
     height: 300px;
   }
+
+  .content-title {
+    font-size: 1.8rem;
+  }
+
+  .content-text {
+    font-size: 1.4rem;
+  }
+
+  .card-title {
+    font-size: 1.6rem;
+  }
+
+  .card-text {
+    font-size: 1.3rem;
+  }
+
+  .personaggio-name {
+    font-size: 1.6rem;
+  }
+
+  .personaggio-desc {
+    font-size: 1.3rem;
+  }
+
+  .image-container {
+    height: 180px;
+  }
+
+  .timeline-item {
+    padding-left: 3rem;
+  }
+
+  .timeline-year {
+    font-size: 1.8rem;
+  }
+
+  .timeline-text {
+    font-size: 1.4rem;
+  }
 }
 
 @media screen and (max-width: 480px) {
+  .section {
+    padding: 5rem 0;
+  }
+
+  .section-content {
+    padding: 1.5rem;
+  }
+
   .hero-title {
     font-size: 2.8rem;
   }
@@ -562,7 +652,7 @@ body {
   }
 
   .section-title {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 
   .btn {
@@ -572,6 +662,46 @@ body {
 
   .nav-links {
     width: 80%;
+  }
+
+  .content-title {
+    font-size: 1.6rem;
+  }
+
+  .content-text {
+    font-size: 1.3rem;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+  }
+
+  .card-text {
+    font-size: 1.2rem;
+  }
+
+  .personaggio-name {
+    font-size: 1.5rem;
+  }
+
+  .personaggio-desc {
+    font-size: 1.2rem;
+  }
+
+  .image-container {
+    height: 160px;
+  }
+
+  .timeline-item {
+    padding-left: 2.5rem;
+  }
+
+  .timeline-year {
+    font-size: 1.6rem;
+  }
+
+  .timeline-text {
+    font-size: 1.2rem;
   }
 }
 
@@ -595,6 +725,6 @@ body {
 
 /* Hide scrollbar for IE, Edge and Firefox */
 * {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
