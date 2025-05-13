@@ -451,8 +451,9 @@ body {
   height: 15px;
   margin: 15px 0;
   transform: rotate(45deg);
-  background-color: rgba(255, 255, 255, 0.5);
-  transition: all 0.3s;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
   cursor: pointer;
   position: relative;
 }
@@ -460,26 +461,14 @@ body {
 .side-nav-item:hover,
 .side-nav-item.active {
   background-color: #e2b144;
+  border-color: white;
   transform: rotate(45deg) scale(1.2);
+  box-shadow: 0 0 10px rgba(226, 177, 68, 0.5);
 }
 
+/* Removing the white square effect */
 .side-nav-item:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-45deg);
-  width: 0;
-  height: 0;
-  background-color: transparent;
-  transition: all 0.3s;
-}
-
-.side-nav-item:hover:before,
-.side-nav-item.active:before {
-  width: 8px;
-  height: 8px;
-  background-color: white;
+  display: none;
 }
 
 @media screen and (max-width: 1200px) {
@@ -597,4 +586,15 @@ body {
 
 .toggle .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }

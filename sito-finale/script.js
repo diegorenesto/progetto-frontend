@@ -1,3 +1,12 @@
+// burger menu
+const burger = document.querySelector('.burger');
+const navLinks = document.querySelector('.nav-links');
+
+burger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  burger.classList.toggle('toggle');
+});
+
 // effetto scroll della navbar
 window.addEventListener("scroll", function () {
   const navbar = document.querySelector(".navbar");
