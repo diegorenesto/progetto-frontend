@@ -34,12 +34,14 @@
     <!-- Side Navigation (Diamonds) -->
     <div class="side-navigation">
         <div class="side-nav-item active" data-section="hero"></div>
-        <div class="side-nav-item" data-section="carousel"></div>
+        <div class="side-nav-item" data-section="mazzini"></div>
+        <div class="side-nav-item" data-section="cavour"></div>
+        <div class="side-nav-item" data-section="garibaldi"></div>
+        <div class="side-nav-item" data-section="vittorio"></div>
         <div class="side-nav-item" data-section="multimedia"></div>
     </div>
 
-    <div class="section" id="hero"
-        style="background-image: url(img/patrioti.webp)">
+    <div class="section" id="hero" style="background-image: url(img/patrioti/patrioti.webp)">
         <div class="overlay"></div>
         <div class="section-content text-center">
             <h1 class="hero-title">I Patrioti dell'Unità d'Italia</h1>
@@ -50,84 +52,108 @@
         </div>
     </div>
 
-    <div class="section dark-section" id="carousel">
+    <section id="mazzini" class="section" style="background-image: url(img/patrioti/mazzini-section.webp);">
         <div class="overlay"></div>
         <div class="section-content">
-            <div class="carousel-container">
-                <div class="carousel-track">
-                    <div class="carousel-slide">
-                        <div class="patriota-card">
-                            <div class="patriota-image">
-                                <img src="img/Giuseppe_Mazzini.jpg" alt="Giuseppe Mazzini">
-                            </div>
-                            <h3>Giuseppe Mazzini</h3>
-                            <h4>L'Ideologo</h4>
-                            <p class="quote">"L'unità è il vero fine, l'associazione non è che il mezzo."</p>
-                            <p class="description">Filosofo, politico e rivoluzionario. Fondatore della Giovine Italia,
-                                dedicò la sua vita all'unificazione del paese.</p>
-                            <button class="btn modal-trigger" data-patriota="mazzini">Approfondisci</button>
-                        </div>
-                    </div>
-                    <div class="carousel-slide">
-                        <div class="patriota-card">
-                            <div class="patriota-image">
-                                <img src="img/Camillo_Benso.jpeg" alt="Camillo Benso Conte di Cavour">
-                            </div>
-                            <h3>Camillo Benso Conte di Cavour</h3>
-                            <h4>Il Diplomatico</h4>
-                            <p class="quote">"Le riforme compiute a tempo sono quelle che evitano le rivoluzioni."</p>
-                            <p class="description">Primo Presidente del Consiglio del Regno d'Italia. Artefice
-                                dell'unificazione attraverso la diplomazia e le alleanze internazionali.</p>
-                            <button class="btn modal-trigger" data-patriota="cavour">Approfondisci</button>
-                        </div>
-                    </div>
-                    <div class="carousel-slide">
-                        <div class="patriota-card">
-                            <div class="patriota-image">
-                                <img src="img/Giuseppe_Garibaldi.jpg" alt="Giuseppe Garibaldi">
-                            </div>
-                            <h3>Giuseppe Garibaldi</h3>
-                            <h4>L'Eroe dei Due Mondi</h4>
-                            <p class="quote">"Qui si fa l'Italia o si muore!"</p>
-                            <p class="description">Generale e condottiero. La sua Spedizione dei Mille fu decisiva per
-                                l'unificazione del Regno d'Italia.</p>
-                            <button class="btn modal-trigger" data-patriota="garibaldi">Approfondisci</button>
-                        </div>
-                    </div>
-                    <div class="carousel-slide">
-                        <div class="patriota-card">
-                            <div class="patriota-image">
-                                <img src="img/Vittorio_Emanuele_II.jpg" alt="Vittorio Emanuele II">
-                            </div>
-                            <h3>Vittorio Emanuele II</h3>
-                            <h4>Il Padre della Patria</h4>
-                            <p class="quote">"Siamo soli contro tutti, tanto meglio: avremo più gloria!"</p>
-                            <p class="description">Primo Re d'Italia. Sotto il suo regno si completò il processo di
-                                unificazione nazionale.</p>
-                            <button class="btn modal-trigger" data-patriota="vittorio">Approfondisci</button>
-                        </div>
-                    </div>
+            <h2 class="section-title">Giuseppe Mazzini</h2>
+            <div class="grid-container">
+                <div class="text-content">
+                    <h3 class="content-title">L'Ideologo del Risorgimento</h3>
+                    <p class="content-text">Nato a Genova nel 1805, Giuseppe Mazzini è stato il principale ideologo del
+                        Risorgimento italiano. Fondatore della Giovine Italia e della Giovine Europa, dedicò la sua vita
+                        alla causa dell'unità nazionale e alla diffusione degli ideali repubblicani.</p>
+                    <p class="content-text">Il suo pensiero politico, basato sui principi di libertà, indipendenza e
+                        unità, influenzò profondamente il movimento risorgimentale italiano e altri movimenti di
+                        liberazione in Europa.</p>
+                    <p class="quote">"La vita è missione, e quindi il dovere è la sua legge suprema."</p>
                 </div>
-                <div class="carousel-nav">
-                    <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
-                    <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+                <div class="media-content">
+                    <iframe src="https://www.youtube.com/embed/NX3ESR1uwMM" allowfullscreen></iframe>
                 </div>
-                <div class="carousel-dots"></div>
             </div>
         </div>
-    </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <section id="cavour" class="section" style="background-image: url(img/patrioti/cavour-section.webp);">
+        <div class="overlay"></div>
+        <div class="section-content">
+            <h2 class="section-title">Camillo Benso Conte di Cavour</h2>
+            <div class="grid-container">
+                <div class="text-content">
+                    <h3 class="content-title">Il Diplomatico</h3>
+                    <p class="content-text">Primo Presidente del Consiglio del Regno d'Italia, fu l'artefice della
+                        politica diplomatica che portò all'unificazione. La sua abilità nel tessere alleanze
+                        internazionali e nel modernizzare il Regno di Sardegna fu fondamentale.</p>
+                    <p class="content-text">Abile statista, riuscì a ottenere l'appoggio della Francia di Napoleone III
+                        e a gestire con maestria le tensioni politiche interne ed esterne.</p>
+                    <p class="quote">"L'Italia è fatta, ora bisogna fare gli italiani."</p>
+                </div>
+                <div class="media-content">
+                    <iframe src="https://www.youtube.com/embed/kgFzUKxisco" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <section id="garibaldi" class="section" style="background-image: url(img/patrioti/garibaldi-section.webp);">
+        <div class="overlay"></div>
+        <div class="section-content">
+            <h2 class="section-title">Giuseppe Garibaldi</h2>
+            <div class="grid-container">
+                <div class="text-content">
+                    <h3 class="content-title">L'Eroe dei Due Mondi</h3>
+                    <p class="content-text">Generale e condottiero italiano, fu una figura chiave del Risorgimento. Le
+                        sue imprese militari e il suo carisma lo resero un eroe popolare in Italia e all'estero.</p>
+                    <p class="content-text">La Spedizione dei Mille nel 1860 rappresentò il momento più alto della sua
+                        azione militare, portando all'annessione del Sud al nascente Regno d'Italia.</p>
+                    <p class="quote">"Qui si fa l'Italia o si muore!"</p>
+                </div>
+                <div class="media-content">
+                    <iframe src="https://www.youtube.com/embed/dtXx3UVjQzc" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <section id="vittorio" class="section" style="background-image: url(img/patrioti/vittorio-section.webp);">
+        <div class="overlay"></div>
+        <div class="section-content">
+            <h2 class="section-title">Vittorio Emanuele II</h2>
+            <div class="grid-container">
+                <div class="text-content">
+                    <h3 class="content-title">Il Padre della Patria</h3>
+                    <p class="content-text">Ultimo re di Sardegna e primo re d'Italia, guidò il processo di unificazione
+                        nazionale. Mantenne lo Statuto Albertino e seppe mediare tra le diverse forze politiche del
+                        Risorgimento.</p>
+                    <p class="content-text">Sotto il suo regno si completò l'unificazione con la presa di Roma nel 1870,
+                        che divenne capitale del Regno d'Italia.</p>
+                    <p class="quote">"Siamo soli contro tutti, tanto meglio: avremo più gloria!"</p>
+                </div>
+                <div class="media-content">
+                    <iframe src="https://www.youtube.com/embed/pCPL7fHBsbs" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
 
     <div class="section dark-section" id="multimedia">
         <div class="overlay"></div>
         <div class="section-content">
-            <h2 class="section-title">Documentari e Approfondimenti</h2>
-            <div class="video-grid">
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/watch?v=ADagHqIODzA" allowfullscreen></iframe>
-                </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/watch?v=kgFzUKxisco" allowfullscreen></iframe>
-                </div>
+            <h2 class="section-title">I Padri del Risorgimento</h2>
+            <div class="final-image">
+                <img src="img/patrioti/patrioti-murales.webp" alt="I Padri del Risorgimento">
             </div>
         </div>
     </div>
