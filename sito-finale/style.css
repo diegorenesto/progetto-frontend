@@ -728,3 +728,171 @@ body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+/* stili carosello */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.patriota-card {
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid #e2b144;
+  padding: 4rem;
+  max-width: 800px;
+  text-align: center;
+}
+
+.patriota-image {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto 3rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #e2b144;
+}
+
+.patriota-card h3 {
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+  font-family: "Cinzel", serif;
+}
+
+.patriota-card h4 {
+  font-size: 2.2rem;
+  color: #e2b144;
+  margin-bottom: 2rem;
+}
+
+.patriota-card .description {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  margin: 2rem 0;
+}
+
+.patriota-card .btn {
+  font-size: 1.8rem;
+  color: white;
+}
+
+.patriota-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: sepia(30%);
+}
+
+.quote {
+  font-style: italic;
+  color: #e2b144;
+  font-size: 1.8rem;
+  margin: 2rem 0;
+}
+
+.carousel-nav button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(226, 177, 68, 0.3);
+  border: none;
+  color: white;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.carousel-prev {
+  left: 2rem;
+}
+.carousel-next {
+  right: 2rem;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #e2b144;
+}
+
+/* stili modal */
+.modal-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.modal {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  margin: 5vh auto;
+  background: #111;
+  border: 2px solid #e2b144;
+  padding: 3rem;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #e2b144;
+}

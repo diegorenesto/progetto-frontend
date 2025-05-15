@@ -1,14 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>I Patrioti - Unità d'Italia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#" class="logo">L'UNITÀ D'ITALIA</a>
 
+        <div class="nav-links" id="navLinks">
+            <a href="#unita" class="nav-link">L'Unità</a>
+            <a href="#guerre" class="nav-link">Guerre</a>
+            <a href="patrioti.html" class="nav-link">Patrioti</a>
+            <a href="#mafia" class="nav-link">La Mafia</a>
+            <a href="#moderna" class="nav-link">Italia Moderna</a>
+            <a href="#timeline" class="nav-link">Cronologia</a>
+            <a href="#" class="cta-button">ESPLORA</a>
+        </div>
+
+        <div class="burger" id="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <!-- Side Navigation (Diamonds) -->
+    <div class="side-navigation">
+        <div class="side-nav-item active" data-section="hero"></div>
+        <div class="side-nav-item" data-section="carousel"></div>
+        <div class="side-nav-item" data-section="multimedia"></div>
+    </div>
+
+    <div class="section" id="hero"
+        style="background-image: url(img/patrioti.webp)">
+        <div class="overlay"></div>
+        <div class="section-content text-center">
+            <h1 class="hero-title">I Patrioti dell'Unità d'Italia</h1>
+            <p class="hero-subtitle">Le figure chiave che hanno plasmato il destino della nazione</p>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </div>
+
+    <div class="section dark-section" id="carousel">
+        <div class="overlay"></div>
+        <div class="section-content">
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <div class="carousel-slide">
+                        <div class="patriota-card">
+                            <div class="patriota-image">
+                                <img src="img/Giuseppe_Mazzini.jpg" alt="Giuseppe Mazzini">
+                            </div>
+                            <h3>Giuseppe Mazzini</h3>
+                            <h4>L'Ideologo</h4>
+                            <p class="quote">"L'unità è il vero fine, l'associazione non è che il mezzo."</p>
+                            <p class="description">Filosofo, politico e rivoluzionario. Fondatore della Giovine Italia,
+                                dedicò la sua vita all'unificazione del paese.</p>
+                            <button class="btn modal-trigger" data-patriota="mazzini">Approfondisci</button>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="patriota-card">
+                            <div class="patriota-image">
+                                <img src="img/Camillo_Benso.jpeg" alt="Camillo Benso Conte di Cavour">
+                            </div>
+                            <h3>Camillo Benso Conte di Cavour</h3>
+                            <h4>Il Diplomatico</h4>
+                            <p class="quote">"Le riforme compiute a tempo sono quelle che evitano le rivoluzioni."</p>
+                            <p class="description">Primo Presidente del Consiglio del Regno d'Italia. Artefice
+                                dell'unificazione attraverso la diplomazia e le alleanze internazionali.</p>
+                            <button class="btn modal-trigger" data-patriota="cavour">Approfondisci</button>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="patriota-card">
+                            <div class="patriota-image">
+                                <img src="img/Giuseppe_Garibaldi.jpg" alt="Giuseppe Garibaldi">
+                            </div>
+                            <h3>Giuseppe Garibaldi</h3>
+                            <h4>L'Eroe dei Due Mondi</h4>
+                            <p class="quote">"Qui si fa l'Italia o si muore!"</p>
+                            <p class="description">Generale e condottiero. La sua Spedizione dei Mille fu decisiva per
+                                l'unificazione del Regno d'Italia.</p>
+                            <button class="btn modal-trigger" data-patriota="garibaldi">Approfondisci</button>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="patriota-card">
+                            <div class="patriota-image">
+                                <img src="img/Vittorio_Emanuele_II.jpg" alt="Vittorio Emanuele II">
+                            </div>
+                            <h3>Vittorio Emanuele II</h3>
+                            <h4>Il Padre della Patria</h4>
+                            <p class="quote">"Siamo soli contro tutti, tanto meglio: avremo più gloria!"</p>
+                            <p class="description">Primo Re d'Italia. Sotto il suo regno si completò il processo di
+                                unificazione nazionale.</p>
+                            <button class="btn modal-trigger" data-patriota="vittorio">Approfondisci</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-nav">
+                    <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="carousel-dots"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section dark-section" id="multimedia">
+        <div class="overlay"></div>
+        <div class="section-content">
+            <h2 class="section-title">Documentari e Approfondimenti</h2>
+            <div class="video-grid">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/watch?v=ADagHqIODzA" allowfullscreen></iframe>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/watch?v=kgFzUKxisco" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-container">
+        <div class="modal">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <div class="modal-content"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
