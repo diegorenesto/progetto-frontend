@@ -107,27 +107,40 @@
         <div class="overlay"></div>
         <div class="section-content">
             <h2 class="section-title">Potenza Economica</h2>
-            <div class="stats-container">
-                <div class="stat-block">
-                    <div class="stat-circle">
-                        <span class="stat-value">8°</span>
-                        <span class="stat-label">Economia Mondiale</span>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                <div class="stats-container" style="margin-left: -200px;">
+                    <div class="stat-block">
+                        <div class="stat-circle">
+                            <span class="stat-value">8°</span>
+                            <span class="stat-label">Economia Mondiale</span>
+                        </div>
+                    </div>
+                    <div class="stat-details" style="width: 400px;">
+                        <div class="stat-row">
+                            <span class="stat-key">PIL</span>
+                            <span class="stat-value">1.886 Miliardi €</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-key">Esportazioni</span>
+                            <span class="stat-value">516 Miliardi €</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-key">Made in Italy</span>
+                            <span class="stat-value">Top 3 Valore del Marchio</span>
+                        </div>
                     </div>
                 </div>
-                <div class="stat-details">
-                    <div class="stat-row">
-                        <span class="stat-key">PIL</span>
-                        <span class="stat-value">1.886 Miliardi €</span>
-                    </div>
-                    <div class="stat-row">
-                        <span class="stat-key">Esportazioni</span>
-                        <span class="stat-value">516 Miliardi €</span>
-                    </div>
-                    <div class="stat-row">
-                        <span class="stat-key">Made in Italy</span>
-                        <span class="stat-value">Top 3 Valore del Marchio</span>
-                    </div>
+                <div class="media-container" style="height: 400px">
+                    <iframe src="https://www.youtube.com/embed/your-video-id-1" 
+                            style="width: 120%; height: 100%;"
+                            title="L'Italia in Movimento" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
                 </div>
+            </div>
+            <div class="text-content text-center" style="margin-top: 2rem;">
+                <p class="content-text">L'economia italiana in numeri e successi</p>
             </div>
         </div>
     </section>
@@ -181,11 +194,19 @@
     </section>
 
     <!-- Innovation Section -->
-    <section id="innovation" class="section panoramic" style="background-image: url('');">
+    <section id="innovation" class="section panoramic" style="background-image: url(''); min-height: 100vh;">
         <div class="overlay"></div>
         <div class="section-content">
             <h2 class="section-title">Innovazione e Ricerca</h2>
-            <div class="fact-list">
+            <div class="media-container" style="height: 400px; max-width: 800px; margin: 0 auto;">
+                <iframe src="https://www.youtube.com/embed/your-video-id-2" 
+                        style="width: 100%; height: 100%;"
+                        title="Innovazione Italiana" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+            <div class="fact-list" style="margin-top: 30px;">
                 <div class="fact-item">
                     <i class="fas fa-rocket"></i> <!-- razzo -->
                     <span>7° paese per pubblicazioni scientifiche</span>
@@ -214,13 +235,13 @@
                 </div>
             </div>
         </div>
-        <div class="scroll-indicator">
+        <div class="scroll-indicator" style="z-index: 10;">
             <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
     <!-- Future Section -->
-    <section id="future" class="section culture-showcase" style="background-image: url('');">
+    <section id="future" class="section culture-showcase" style="background-image: url(''); min-height: 100vh;">
         <div class="overlay"></div>
         <div class="section-content">
             <h2 class="mega-title">Il Futuro è Qui</h2>
