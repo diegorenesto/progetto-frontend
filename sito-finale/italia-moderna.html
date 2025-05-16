@@ -1,14 +1,267 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport"="width=device-width, initial-scale=1.0">
+    <title>Italia Moderna - Unità d'Italia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">L'UNITÀ D'ITALIA</a>
 
+        <div class="nav-links" id="navLinks">
+            <a href="unità.html" class="nav-link">L'Unità</a>
+            <a href="guerre.html" class="nav-link">Guerre</a>
+            <a href="patrioti.html" class="nav-link">Patrioti</a>
+            <a href="mafia.html" class="nav-link">La Mafia</a>
+            <a href="italia-moderna.html" class="nav-link">Italia Moderna</a>
+            <a href="#timeline" class="nav-link">Cronologia</a>
+            <a href="#" class="cta-button">ESPLORA</a>
+        </div>
+
+        <div class="burger" id="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <!-- Side Navigation -->
+    <div class="side-navigation">
+        <div class="side-nav-item active" data-section="hero"></div>
+        <div class="side-nav-item" data-section="rankings"></div>
+        <div class="side-nav-item" data-section="economy"></div>
+        <div class="side-nav-item" data-section="culture"></div>
+        <div class="side-nav-item" data-section="innovation"></div>
+        <div class="side-nav-item" data-section="future"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="section"
+        style="background-image: url('https://www.raicultura.it/dl/img/2020/02/24/1582559186346_patrimoniook.jpg');">
+        <div class="overlay"></div>
+        <div class="section-content text-center">
+            <h1 class="hero-title">Italia Moderna</h1>
+            <p class="hero-subtitle">Eccellenza e Innovazione nel XXI Secolo</p>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Rankings Section -->
+    <section id="rankings" class="section" style="background-image: url('');">
+        <div class="overlay"></div>
+        <div class="section-content">
+            <h2 class="section-title">L'Italia nel Mondo</h2>
+            <div class="rankings-grid">
+                <div class="rank-card">
+                    <div class="rank-number">#1</div>
+                    <div class="rank-icon"><i class="fas fa-wine-glass-alt"></i></div>
+                    <h3>Produzione Vinicola</h3>
+                    <p>Prima produttrice mondiale di vino</p>
+                    <div class="rank-image"
+                        style="background-image: url('img/italia-moderna/produzione-vinicola.jpg');"></div>
+                    <div class="stats-mini">
+                        <div class="mini-stat">54.8 Mhl</div>
+                        <div class="mini-desc">Produzione Annuale</div>
+                    </div>
+                </div>
+                <div class="rank-card">
+                    <div class="rank-number">#1</div>
+                    <div class="rank-icon"><i class="fas fa-landmark"></i></div>
+                    <h3>Patrimonio UNESCO</h3>
+                    <p>58 siti di interesse mondiale</p>
+                    <div class="rank-image" style="background-image: url('img/italia-moderna/patrimonio-unesco.webp');">
+                    </div>
+                    <div class="stats-mini">
+                        <div class="mini-stat">58</div>
+                        <div class="mini-desc">Siti Riconosciuti</div>
+                    </div>
+                </div>
+                <div class="rank-card">
+                    <div class="rank-number">#2</div>
+                    <div class="rank-icon"><i class="fas fa-industry"></i></div>
+                    <h3>Manifattura Europea</h3>
+                    <p>Seconda potenza industriale UE</p>
+                    <div class="rank-image" style="background-image: url('img/italia-moderna/manifattura.jpeg');"></div>
+                    <div class="stats-mini">
+                        <div class="mini-stat">473.5 Mld</div>
+                        <div class="mini-desc">Valore Aggiunto</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Economy Section -->
+    <section id="economy" class="section stats-section" style="background-image: url('');">
+        <div class="overlay"></div>
+        <div class="section-content">
+            <h2 class="section-title">Potenza Economica</h2>
+            <div class="stats-container">
+                <div class="stat-block">
+                    <div class="stat-circle">
+                        <span class="stat-value">8°</span>
+                        <span class="stat-label">Economia Mondiale</span>
+                    </div>
+                </div>
+                <div class="stat-details">
+                    <div class="stat-row">
+                        <span class="stat-key">PIL</span>
+                        <span class="stat-value">1.886 Miliardi €</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-key">Esportazioni</span>
+                        <span class="stat-value">516 Miliardi €</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-key">Made in Italy</span>
+                        <span class="stat-value">Top 3 Valore del Marchio</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Culture Section -->
+    <section id="culture" class="section" style="background-image: url('');">
+        <div class="overlay"></div>
+        <div class="section-content">
+            <h2 class="section-title">Eccellenze Culturali</h2>
+            <div class="stats-gallery">
+                <div class="stat-box large">
+                    <span class="stat-number">58</span>
+                    <span class="stat-desc">Siti UNESCO</span>
+                    <p class="stat-text">Il maggior numero al mondo di siti patrimonio dell'umanità</p>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="img/italia-moderna/colosseo.jpg" alt="Colosseo">
+                        <div class="gallery-text">
+                            <h3>Arte e Storia</h3>
+                            <p>Leader mondiale nei beni culturali</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/italia-moderna/moda-vogue.webp" alt="Moda italiana">
+                        <div class="gallery-text">
+                            <h3>Moda e Design</h3>
+                            <p>Capitale mondiale del fashion</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/italia-moderna/cucina.jpg" alt="Cucina italiana">
+                        <div class="gallery-text">
+                            <h3>Cucina</h3>
+                            <p>Patrimonio gastronomico unico</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/italia-moderna/robot-italiani.jpg" alt="Tecnologia italiana">
+                        <div class="gallery-text">
+                            <h3>Innovazione</h3>
+                            <p>Eccellenza tecnologica</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Innovation Section -->
+    <section id="innovation" class="section panoramic" style="background-image: url('');">
+        <div class="overlay"></div>
+        <div class="section-content">
+            <h2 class="section-title">Innovazione e Ricerca</h2>
+            <div class="fact-list">
+                <div class="fact-item">
+                    <i class="fas fa-rocket"></i> <!-- razzo -->
+                    <span>7° paese per pubblicazioni scientifiche</span>
+                </div>
+                <div class="fact-item">
+                    <i class="fas fa-microscope"></i> <!-- microscopio -->
+                    <span>Top 10 in brevetti tecnologici</span>
+                </div>
+                <div class="fact-item">
+                    <i class="fas fa-atom"></i> <!-- atomo -->
+                    <span>Leader in fisica delle particelle</span>
+                </div>
+            </div>
+            <div class="progress-bars">
+                <div class="progress-item">
+                    <h3>Investimenti in R&D</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 70%"></div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <h3>Startup Innovative</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 85%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Future Section -->
+    <section id="future" class="section culture-showcase" style="background-image: url('');">
+        <div class="overlay"></div>
+        <div class="section-content">
+            <h2 class="mega-title">Il Futuro è Qui</h2>
+            <div class="stats-dashboard">
+                <div class="stat-column">
+                    <div class="mega-stat">
+                        <span class="stat-number">2050</span>
+                        <span class="stat-desc">Obiettivo Net Zero</span>
+                    </div>
+                    <div class="mega-stat">
+                        <span class="stat-number">40%</span>
+                        <span class="stat-desc">Energia Rinnovabile</span>
+                    </div>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <i class="fas fa-solar-panel"></i>
+                        <span class="number">1°</span>
+                        <span class="label">In Europa per riciclo industriale</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-leaf"></i>
+                        <span class="number">3°</span>
+                        <span class="label">Per efficienza energetica</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-car-battery"></i>
+                        <span class="number">5°</span>
+                        <span class="label">Mobilità elettrica</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-recycle"></i>
+                        <span class="number">79%</span>
+                        <span class="label">Tasso di riciclo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
