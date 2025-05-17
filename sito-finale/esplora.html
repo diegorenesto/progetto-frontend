@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESPLORA | L'UNITÀ D'ITALIA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">L'UNITÀ D'ITALIA</a>
+
+        <div class="nav-links" id="navLinks">
+            <a href="unità.html" class="nav-link">L'Unità</a>
+            <a href="guerre.html" class="nav-link">Guerre</a>
+            <a href="patrioti.html" class="nav-link">Patrioti</a>
+            <a href="mafia.html" class="nav-link">La Mafia</a>
+            <a href="italia-moderna.html" class="nav-link">Italia Moderna</a>
+            <a href="cronologia.html" class="nav-link">Cronologia</a>
+            <a href="esplora.html" class="cta-button">ESPLORA</a>
+        </div>
+
+        <div class="burger" id="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <!-- Side Navigation (Diamonds) -->
+    <div class="side-navigation">
+        <div class="side-nav-item active" data-section="hero"></div>
+        <div class="side-nav-item" data-section="san-Pietro"></div>
+        <div class="side-nav-item" data-section="milano"></div>
+        <div class="side-nav-item" data-section="altro"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="section" style="background-image: url('img/esplora/esplora-italia.avif');">
+        <div class="overlay"></div>
+        <div class="section-content text-center">
+            <h1 class="hero-title">L'Italia Nel Tempo</h1>
+            <p class="hero-subtitle">Un viaggio attraverso le trasformazioni del nostro paese</p>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- San Pietro Section -->
+    <section id="san-Pietro" class="section dark-section" style="background-image: url(img/esplora/background-sanPietro.jpg);">
+        <div class="overlay"></div>
+        <div class="section-content">
+            <h2 class="section-title">Basilica di San Pietro</h2>
+            <div class="city-container">
+                <div class="city-card">
+                    <div class="image-frame">
+                        <img src="img/esplora/san-Pietro-prima.jpg" alt="San Pietro 1870">
+                    </div>
+                    <div class="date-label">1870</div>
+                </div>
+                <div class="city-card">
+                    <div class="image-frame">
+                        <img src="img/esplora/san-Pietro-oggi.jpg" alt="San Pietro 2023">
+                    </div>
+                    <div class="date-label">2025</div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Milano Section -->
+    <section id="milano" class="section" style="background-image: url(img/esplora/background-duomo.webp);">
+        <div class="overlay"></div>
+        <div class="section-content">
+            <h2 class="section-title">Milano e il Duomo</h2>
+            <div class="city-container">
+                <div class="city-card">
+                    <div class="image-frame">
+                        <img src="img/esplora/milano/milano-1861.jpg" alt="Milano 1861">
+                    </div>
+                    <div class="date-label">1861</div>
+                </div>
+                <div class="city-card">
+                    <div class="image-frame">
+                        <img src="img/esplora/milano/milano-oggi.jpg" alt="Milano oggi">
+                    </div>
+                    <div class="date-label">2025</div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Gallery Grid Section -->
+    <section id="altro" class="section dark-section">
+        <div class="overlay"></div>
+        <div class="section-content">
+            <h2 class="section-title">Altre Fotografie Storiche</h2>
+            <div class="photo-grid">
+                <div class="photo-item" data-year="1860">
+                    <img src="img/esplora/roma-1860.jpg" alt="Roma 1860">
+                    <div class="photo-overlay">
+                        <span class="photo-year">1860</span>
+                        <span class="photo-location">Roma Antica</span>
+                    </div>
+                </div>
+                
+                <div class="photo-item" data-year="1923">
+                    <img src="img/esplora/roma-1923.jpg" alt="Roma 1923">
+                    <div class="photo-overlay">
+                        <span class="photo-year">1923</span>
+                        <span class="photo-location">Roma, Via del Corso</span>
+                    </div>
+                </div>
+                
+                <div class="photo-item" data-year="1890">
+                    <img src="img/esplora/ponte-santAngelo.jpg" alt="Ponte Sant'Angelo">
+                    <div class="photo-overlay">
+                        <span class="photo-year">1890</span>
+                        <span class="photo-location">Roma, Ponte Sant'Angelo</span>
+                    </div>
+                </div>
+                
+                <div class="photo-item" data-year="1925">
+                    <img src="img/esplora/piazza-5scole.jpg" alt="Piazza delle Cinque Scole">
+                    <div class="photo-overlay">
+                        <span class="photo-year">1925</span>
+                        <span class="photo-location">Roma, Piazza delle Cinque Scole</span>
+                    </div>
+                </div>
+                
+                <div class="photo-item" data-year="1935">
+                    <img src="img/esplora/mausoleo-roma-1935.jpg" alt="Mausoleo Roma">
+                    <div class="photo-overlay">
+                        <span class="photo-year">1935</span>
+                        <span class="photo-location">Roma, Mausoleo</span>
+                    </div>
+                </div>
+                
+                <div class="photo-item" data-year="1955">
+                    <img src="img/esplora/giro-d'italia-1955.jpg" alt="Giro d'Italia">
+                    <div class="photo-overlay">
+                        <span class="photo-year">1955</span>
+                        <span class="photo-location">Roma, Giro d'Italia</span>
+                    </div>
+                </div>
+                
+                <div class="photo-item" data-year="1901">
+                    <img src="img/esplora/largo-chigi-1901.jpg" alt="Largo Chigi">
+                    <div class="photo-overlay">
+                        <span class="photo-year">1901</span>
+                        <span class="photo-location">Roma, Largo Chigi</span>
+                    </div>
+                </div>
+                
+                <div class="photo-item" data-year="1930">
+                    <img src="img/esplora/largo-torre-argentina.jpg" alt="Largo Torre Argentina">
+                    <div class="photo-overlay">
+                        <span class="photo-year">1930</span>
+                        <span class="photo-location">Roma, Largo di Torre Argentina</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Modal -->
+    <div class="photo-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img src="" alt="" class="modal-image">
+            <div class="modal-info">
+                <h3 class="modal-title"></h3>
+                <p class="modal-year"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

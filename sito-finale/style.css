@@ -1467,3 +1467,745 @@ body {
     height: 250px;
   }
 }
+
+/* GALLERY STYLES */
+.gallery-filters {
+    margin-bottom: 4rem;
+}
+
+.gallery-filters .btn {
+    margin: 0 1rem;
+}
+
+.gallery-filters .btn.active {
+    background: #e2b144;
+    color: black;
+}
+
+.before-after-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    padding: 2rem;
+}
+
+.comparison-item {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border: 1px solid #e2b144;
+}
+
+.comparison-wrapper {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    --percent: 50%;
+}
+
+.before-image,
+.after-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.after-image {
+    clip-path: polygon(var(--percent) 0, 100% 0, 100% 100%, var(--percent) 100%);
+}
+
+.slider-handle {
+    position: absolute;
+    left: var(--percent);
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #e2b144;
+    cursor: ew-resize;
+    transform: translateX(-50%);
+}
+
+slider-handle::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background: #e2b144;
+    border-radius: 50%;
+}
+
+.slider-handle::after {
+    content: '⇄';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 20px;
+}
+
+.comparison-caption {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.comparison-caption h3 {
+    font-size: 2.2rem;
+    color: #e2b144;
+    margin-bottom: 1rem;
+    font-family: "Cinzel", serif;
+}
+
+.comparison-caption p {
+    font-size: 1.6rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+@media screen and (max-width: 1200px) {
+    .before-after-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .comparison-wrapper {
+        height: 300px;
+    }
+    
+    .gallery-filters .btn {
+        margin: 0.5rem;
+        font-size: 1.2rem;
+    }
+}
+
+/* COMPARISON STYLES */
+.comparison-grid {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.comparison-item {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border: 1px solid #e2b144;
+    margin-bottom: 4rem;
+}
+
+.comparison-wrapper {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    --percent: 50%;
+}
+
+.before-image,
+.after-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.after-image {
+    clip-path: polygon(var(--percent) 0, 100% 0, 100% 100%, var(--percent) 100%);
+}
+
+.slider-handle {
+    position: absolute;
+    left: var(--percent);
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #e2b144;
+    cursor: ew-resize;
+    transform: translateX(-50%);
+}
+
+sslider-handle::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background: #e2b144;
+    border-radius: 50%;
+}
+
+.slider-handle::after {
+    content: '⇄';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 20px;
+}
+
+.comparison-caption {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.comparison-caption h3 {
+    font-size: 2.4rem;
+    color: #e2b144;
+    margin-bottom: 1rem;
+    font-family: "Cinzel", serif;
+}
+
+.comparison-caption p {
+    font-size: 1.8rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .comparison-wrapper {
+        height: 300px;
+    }
+
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .comparison-caption h3 {
+        font-size: 2rem;
+    }
+
+    .comparison-caption p {
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .comparison-wrapper {
+        height: 250px;
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* SAN PIETRO SECTION */
+.san-pietro-stats {
+    margin-top: 4rem;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid #e2b144;
+}
+
+.san-pietro-stats .fact-item {
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+}
+
+.san-pietro-stats .fact-item i {
+    font-size: 2.4rem;
+    color: #e2b144;
+    margin-right: 2rem;
+    width: 3rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .san-pietro-stats .fact-item {
+        font-size: 1.6rem;
+    }
+    
+    .san-pietro-stats .fact-item i {
+        font-size: 2rem;
+        margin-right: 1.5rem;
+    }
+}
+
+/* GALLERY GRID STYLES */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.gallery-block {
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid #e2b144;
+    padding: 2rem;
+    transition: transform 0.3s;
+}
+
+.gallery-block:hover {
+    transform: translateY(-5px);
+}
+
+.block-title {
+    font-family: "Cinzel", serif;
+    font-size: 2.8rem;
+    color: #e2b144;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.comparison-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 66.67%; /* 3:2 aspect ratio */
+    overflow: hidden;
+    --percent: 50%;
+}
+
+.before-image,
+.after-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.before-image {
+    clip-path: polygon(0 0, var(--percent) 0, var(--percent) 100%, 0 100%);
+    z-index: 2;
+}
+
+.year-label {
+    position: absolute;
+    bottom: 20px;
+    padding: 0.5rem 1rem;
+    background: rgba(0, 0, 0, 0.8);
+    color: #e2b144;
+    font-size: 1.4rem;
+    z-index: 3;
+}
+
+.year-label.before {
+    left: 20px;
+}
+
+.year-label.after {
+    right: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        max-width: 800px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .gallery-block {
+        padding: 1.5rem;
+    }
+    
+    .block-title {
+        font-size: 2.2rem;
+    }
+    
+    .comparison-wrapper {
+        padding-top: 75%; /* 4:3 aspect ratio for mobile */
+    }
+}
+
+/* GALLERY LAYOUT STYLES */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.gallery-block {
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid #e2b144;
+    padding: 2rem;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-block:hover {
+    transform: translateY(-5px);
+}
+
+.block-title {
+    font-family: "Cinzel", serif;
+    font-size: 2.8rem;
+    color: #e2b144;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.comparison-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 66.67%; /* 3:2 aspect ratio */
+    overflow: hidden;
+    --percent: 50%;
+}
+
+.before-image,
+.after-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.before-image {
+    clip-path: polygon(0 0, var(--percent) 0, var(--percent) 100%, 0 100%);
+    z-index: 2;
+}
+
+.year-label {
+    position: absolute;
+    bottom: 20px;
+    padding: 0.5rem 1.5rem;
+    background: rgba(0, 0, 0, 0.8);
+    color: #e2b144;
+    font-size: 1.6rem;
+    z-index: 3;
+    border: 1px solid #e2b144;
+}
+
+.year-label.before {
+    left: 20px;
+}
+
+.year-label.after {
+    right: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+    .gallery-container {
+        grid-template-columns: 1fr;
+        max-width: 800px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .gallery-block {
+        padding: 1.5rem;
+    }
+    
+    .block-title {
+        font-size: 2.2rem;
+    }
+    
+    .comparison-wrapper {
+        padding-top: 75%; /* 4:3 aspect ratio for mobile */
+    }
+}
+
+/* GALLERY LAYOUT STYLES */
+.gallery-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.gallery-group {
+    margin-bottom: 6rem;
+}
+
+.gallery-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.gallery-block {
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid #e2b144;
+    padding: 2rem;
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.gallery-block:hover {
+    transform: translateY(-5px);
+}
+
+.image-frame {
+    width: 100%;
+    padding-top: 66.67%; /* 3:2 aspect ratio */
+    position: relative;
+    overflow: hidden;
+}
+
+.image-frame img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.date-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: #e2b144;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.8rem;
+    border-top: 1px solid #e2b144;
+    font-family: "Cinzel", serif;
+}
+
+@media screen and (max-width: 1200px) {
+    .gallery-pair {
+        grid-template-columns: 1fr;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .gallery-block {
+        padding: 1.5rem;
+    }
+    
+    .date-label {
+        font-size: 1.6rem;
+        padding: 0.8rem;
+    }
+}
+
+/* CITY LAYOUT STYLES */
+.city-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.city-card {
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid #e2b144;
+    padding: 2rem;
+    transition: transform 0.3s;
+    position: relative;
+    height: 500px;
+}
+
+.city-card:hover {
+    transform: translateY(-5px);
+}
+
+.image-frame {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.date-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: #e2b144;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 2.2rem;
+    font-family: "Cinzel", serif;
+    border-top: 1px solid #e2b144;
+}
+
+.card-info {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.card-info p {
+    font-size: 1.8rem;
+    color: #e2b144;
+    font-family: "Cinzel", serif;
+}
+
+@media screen and (max-width: 1200px) {
+    .city-container {
+        grid-template-columns: 1fr;
+        max-width: 800px;
+        gap: 3rem;
+    }
+    
+    .city-card {
+        height: 450px;
+    }
+    
+    .image-frame {
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .city-card {
+        height: 400px;
+    }
+    
+    .image-frame {
+        height: 300px;
+    }
+    
+    .date-label {
+        padding: 1.2rem;
+        font-size: 2rem;
+    }
+}
+
+/* PHOTO GRID STYLES */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.photo-item {
+    position: relative;
+    aspect-ratio: 1;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid #e2b144;
+    transition: transform 0.3s;
+}
+
+.photo-item:hover {
+    transform: translateY(-5px);
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: #e2b144;
+    padding: 1rem;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+}
+
+.photo-item:hover .photo-overlay {
+    transform: translateY(0);
+}
+
+.photo-year {
+    display: block;
+    font-size: 2rem;
+    font-family: "Cinzel", serif;
+}
+
+.photo-location {
+    font-size: 1.6rem;
+    opacity: 0.8;
+}
+
+/* MODAL STYLES */
+.photo-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90vh;
+    margin: 2rem auto;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid #e2b144;
+    padding: 2rem;
+}
+
+.modal-close {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    color: #e2b144;
+    font-size: 3rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.modal-image {
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
+    object-fit: contain;
+}
+
+.modal-info {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.modal-title {
+    font-size: 2.4rem;
+    color: #e2b144;
+    font-family: "Cinzel", serif;
+    margin-bottom: 1rem;
+}
+
+.modal-year {
+    font-size: 1.8rem;
+    color: white;
+}

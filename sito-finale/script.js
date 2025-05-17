@@ -125,3 +125,38 @@ window.addEventListener("wheel", function (event) {
     }, 1000); // Delay to prevent rapid scrolling
   }
 });
+
+// funzionalità foto gallery
+const photoItems = document.querySelectorAll('.photo-item');
+const photoModal = document.querySelector('.photo-modal');
+const modalImage = document.querySelector('.modal-image');
+const modalTitle = document.querySelector('.modal-title');
+const modalYear = document.querySelector('.modal-year');
+const modalClose = document.querySelector('.modal-close');
+
+photoItems.forEach(item => {
+    item.addEventListener('click', () => {
+        const img = item.querySelector('img');
+        const year = item.dataset.year;
+        const location = item.querySelector('.photo-location').textContent;
+
+        modalImage.src = img.src;
+        modalImage.alt = img.alt;
+        modalTitle.textContent = location;
+        modalYear.textContent = year;
+        photoModal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    });
+});
+
+modalClose.addEventListener('click', () => {
+    photoModal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+});
+
+photoModal.addEventListener('click', (e) => {
+    if (e.target === photoModal) {
+        photoModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+});
