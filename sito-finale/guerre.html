@@ -4,152 +4,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guerre - Unità d'Italia</title>
-    <link rel="stylesheet" href="style.css">
+    <title>GUERRE | L'UNITÀ D'ITALIA</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<nav class="navbar">
-    <a href="index.html" class="logo">L'UNITÀ D'ITALIA</a>
+    <nav class="navbar">
+        <a href="index.html" class="logo">L'UNITÀ D'ITALIA</a>
 
-    <div class="nav-links" id="navLinks">
-        <a href="unità.html" class="nav-link">L'Unità</a>
-        <a href="guerre.html" class="nav-link">Guerre</a>
-        <a href="patrioti.html" class="nav-link">Patrioti</a>
-        <a href="mafia.html" class="nav-link">La Mafia</a>
-        <a href="italia-moderna.html" class="nav-link">Italia Moderna</a>
-        <a href="cronologia.html" class="nav-link">Cronologia</a>
-        <a href="#" class="cta-button">ESPLORA</a>
+        <div class="nav-links" id="navLinks">
+            <a href="unità.html" class="nav-link">L'Unità</a>
+            <a href="guerre.html" class="nav-link">Guerre</a>
+            <a href="patrioti.html" class="nav-link">Patrioti</a>
+            <a href="mafia.html" class="nav-link">La Mafia</a>
+            <a href="italia-moderna.html" class="nav-link">Italia Moderna</a>
+            <a href="cronologia.html" class="nav-link">Cronologia</a>
+            <a href="#" class="cta-button">ESPLORA</a>
+        </div>
+
+        <div class="burger" id="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <div class="side-navigation">
+        <div class="side-nav-item active" data-section="hero"></div>
+        <div class="side-nav-item" data-section="prima-guerra"></div>
+        <div class="side-nav-item" data-section="seconda-guerra"></div>
+        <div class="side-nav-item" data-section="terza-guerra"></div>
+        <div class="side-nav-item" data-section="timeline"></div>
     </div>
 
-    <div class="burger" id="burger">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-    </div>
-</nav>
-
-<div class="side-navigation">
-    <div class="side-nav-item active" data-section="prima-guerra"></div>
-    <div class="side-nav-item" data-section="seconda-guerra"></div>
-    <div class="side-nav-item" data-section="terza-guerra"></div>
-    <div class="side-nav-item" data-section="timeline"></div>
-</div>
-
-<section id="prima-guerra" class="section"
-         style="background-image: url('https://cultura.biografieonline.it/wp-content/uploads/2016/01/La-battaglia-di-Pastrengo-Vincenzo-Giacomelli.jpg');">
-    <div class="overlay"></div>
-    <div class="section-content">
-        <h2 class="section-title">Prima Guerra d'Indipendenza</h2>
-        <div class="grid-container">
-            <div class="text-content">
-                <h3 class="content-title">1848-1849</h3>
-                <p class="content-text">La Prima Guerra d'Indipendenza iniziò con le insurrezioni del 1848. Il Regno di
-                    Sardegna, guidato da Carlo Alberto, dichiarò guerra all'Austria. Nonostante alcuni successi
-                    iniziali, la guerra si concluse con la sconfitta di Novara nel 1849.</p>
-                <p class="content-text">Le Cinque Giornate di Milano segnarono l'inizio delle rivolte popolari contro il
-                    dominio austriaco nel Lombardo-Veneto.</p>
-            </div>
-            <div class="media-content">
-                <iframe src="https://www.youtube.com/embed/F-LkmGKzNu8?start=3343" allowfullscreen></iframe>
-            </div>
+    <div class="section" id="hero" style="background-image: url(img/guerre/porta-tosa.jpg)">
+        <div class="overlay"></div>
+        <div class="section-content text-center">
+            <h1 class="hero-title">Le guerre d'indipendenza</h1>
+            <p class="hero-subtitle">Scopri le battaglie che hanno segnato il cammino verso l'unità d'Italia</p>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
         </div>
     </div>
-    <div class="scroll-indicator">
-        <i class="fas fa-chevron-down"></i>
-    </div>
-</section>
 
-<section id="seconda-guerra" class="section"
-         style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/San_Martino_della_Battaglia_-_Turm_Bodenhalle_2a_Napoleon.jpg/500px-San_Martino_della_Battaglia_-_Turm_Bodenhalle_2a_Napoleon.jpg');">
-    <div class="overlay"></div>
-    <div class="section-content">
-        <h2 class="section-title">Seconda Guerra d'Indipendenza</h2>
-        <div class="grid-container">
-            <div class="text-content">
-                <h3 class="content-title">1859</h3>
-                <p class="content-text">Grazie all'alleanza con la Francia di Napoleone III, il Piemonte ottenne la
-                    vittoria nelle battaglie di Magenta e Solferino. La Lombardia venne annessa al Regno di
-                    Sardegna.</p>
-                <p class="content-text">Questa guerra fu orchestrata dal Conte di Cavour, che riuscì a coinvolgere la
-                    Francia contro l'Austria attraverso abili manovre diplomatiche.</p>
-            </div>
-            <div class="media-content">
-                <iframe src="https://www.youtube.com/embed/2sHRCAv7PlI" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
-    <div class="scroll-indicator">
-        <i class="fas fa-chevron-down"></i>
-    </div>
-</section>
-
-<section id="terza-guerra" class="section"
-         style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/30/San_Martino_della_Battaglia_-_Fresco_1866_Custoza_1.jpg');">
-    <div class="overlay"></div>
-    <div class="section-content">
-        <h2 class="section-title">Terza Guerra d'Indipendenza</h2>
-        <div class="grid-container">
-            <div class="text-content">
-                <h3 class="content-title">1866</h3>
-                <p class="content-text">L'alleanza con la Prussia contro l'Austria permise all'Italia di ottenere il
-                    Veneto, nonostante le sconfitte militari a Custoza e Lissa. Questo conflitto segnò un passo
-                    importante verso il completamento dell'unità nazionale.</p>
-                <p class="content-text">La vittoria prussiana sull'Austria fu decisiva per l'annessione del Veneto al
-                    Regno d'Italia.</p>
-            </div>
-            <div class="media-content">
-                <iframe src="https://www.youtube.com/embed/tHQ9SHgHTdQ" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
-    <div class="scroll-indicator">
-        <i class="fas fa-chevron-down"></i>
-    </div>
-</section>
-
-<section id="timeline" class="section dark-section">
-    <div class="overlay"></div>
-    <div class="section-content">
-        <h2 class="section-title">Cronologia delle Guerre</h2>
-        <div class="timeline-container">
-            <div class="timeline-event">
-                <div class="event-date">1848</div>
-                <div class="event-text">Inizio Prima Guerra d'Indipendenza</div>
-                <div class="event-details">
-                    <p>Le rivolte popolari contro gli austriaci iniziano a Milano con le Cinque Giornate. Carlo Alberto
-                        di Savoia dichiara guerra all'Austria.</p>
+    <section id="prima-guerra" class="section"
+        style="background-image: url('https://cultura.biografieonline.it/wp-content/uploads/2016/01/La-battaglia-di-Pastrengo-Vincenzo-Giacomelli.jpg');">
+        <div class="overlay"></div>
+        <div class="section-content">
+            <h2 class="section-title">Prima Guerra d'Indipendenza</h2>
+            <div class="grid-container">
+                <div class="text-content">
+                    <h3 class="content-title">1848-1849</h3>
+                    <p class="content-text">La Prima Guerra d'Indipendenza iniziò con le insurrezioni del 1848. Il Regno
+                        di
+                        Sardegna, guidato da Carlo Alberto, dichiarò guerra all'Austria. Nonostante alcuni successi
+                        iniziali, la guerra si concluse con la sconfitta di Novara nel 1849.</p>
+                    <p class="content-text">Le Cinque Giornate di Milano segnarono l'inizio delle rivolte popolari
+                        contro il
+                        dominio austriaco nel Lombardo-Veneto.</p>
                 </div>
-            </div>
-            <div class="timeline-event">
-                <div class="event-date">1849</div>
-                <div class="event-text">Battaglia di Novara</div>
-                <div class="event-details">
-                    <p>La sconfitta di Novara segna la fine della Prima Guerra d'Indipendenza. Carlo Alberto abdica in
-                        favore di Vittorio Emanuele II.</p>
-                </div>
-            </div>
-            <div class="timeline-event">
-                <div class="event-date">1859</div>
-                <div class="event-text">Seconda Guerra d'Indipendenza</div>
-                <div class="event-details">
-                    <p>Vittorie franco-piemontesi a Magenta e Solferino portano all'annessione della Lombardia.</p>
-                </div>
-            </div>
-            <div class="timeline-event">
-                <div class="event-date">1866</div>
-                <div class="event-text">Terza Guerra d'Indipendenza</div>
-                <div class="event-details">
-                    <p>Nonostante le sconfitte militari, l'Italia ottiene il Veneto grazie all'alleanza con la
-                        Prussia.</p>
+                <div class="media-content">
+                    <iframe src="https://www.youtube.com/embed/F-LkmGKzNu8?start=3343" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
 
-<script src="script.js"></script>
+    <section id="seconda-guerra" class="section" style="background-image: url('img/guerre/seconda.jpg');">
+        <div class="overlay"></div>
+        <div class="section-content">
+            <h2 class="section-title">Seconda Guerra d'Indipendenza</h2>
+            <div class="grid-container">
+                <div class="text-content">
+                    <h3 class="content-title">1859</h3>
+                    <p class="content-text">Grazie all'alleanza con la Francia di Napoleone III, il Piemonte ottenne la
+                        vittoria nelle battaglie di Magenta e Solferino. La Lombardia venne annessa al Regno di
+                        Sardegna.</p>
+                    <p class="content-text">Questa guerra fu orchestrata dal Conte di Cavour, che riuscì a coinvolgere
+                        la
+                        Francia contro l'Austria attraverso abili manovre diplomatiche.</p>
+                </div>
+                <div class="media-content">
+                    <iframe src="https://www.youtube.com/embed/2sHRCAv7PlI" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <section id="terza-guerra" class="section"
+        style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/30/San_Martino_della_Battaglia_-_Fresco_1866_Custoza_1.jpg');">
+        <div class="overlay"></div>
+        <div class="section-content">
+            <h2 class="section-title">Terza Guerra d'Indipendenza</h2>
+            <div class="grid-container">
+                <div class="text-content">
+                    <h3 class="content-title">1866</h3>
+                    <p class="content-text">L'alleanza con la Prussia contro l'Austria permise all'Italia di ottenere il
+                        Veneto, nonostante le sconfitte militari a Custoza e Lissa. Questo conflitto segnò un passo
+                        importante verso il completamento dell'unità nazionale.</p>
+                    <p class="content-text">La vittoria prussiana sull'Austria fu decisiva per l'annessione del Veneto
+                        al
+                        Regno d'Italia.</p>
+                </div>
+                <div class="media-content">
+                    <iframe src="https://www.youtube.com/embed/tHQ9SHgHTdQ" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <section id="timeline" class="section dark-section">
+        <div class="overlay"></div>
+        <div class="section-content">
+            <h2 class="section-title">Cronologia delle Guerre</h2>
+            <div class="timeline-container">
+                <div class="timeline-event">
+                    <div class="event-date">1848</div>
+                    <div class="event-text">Inizio Prima Guerra d'Indipendenza</div>
+                    <div class="event-details">
+                        <p>Le rivolte popolari contro gli austriaci iniziano a Milano con le Cinque Giornate. Carlo
+                            Alberto
+                            di Savoia dichiara guerra all'Austria.</p>
+                    </div>
+                </div>
+                <div class="timeline-event">
+                    <div class="event-date">1849</div>
+                    <div class="event-text">Battaglia di Novara</div>
+                    <div class="event-details">
+                        <p>La sconfitta di Novara segna la fine della Prima Guerra d'Indipendenza. Carlo Alberto abdica
+                            in
+                            favore di Vittorio Emanuele II.</p>
+                    </div>
+                </div>
+                <div class="timeline-event">
+                    <div class="event-date">1859</div>
+                    <div class="event-text">Seconda Guerra d'Indipendenza</div>
+                    <div class="event-details">
+                        <p>Vittorie franco-piemontesi a Magenta e Solferino portano all'annessione della Lombardia.</p>
+                    </div>
+                </div>
+                <div class="timeline-event">
+                    <div class="event-date">1866</div>
+                    <div class="event-text">Terza Guerra d'Indipendenza</div>
+                    <div class="event-details">
+                        <p>Nonostante le sconfitte militari, l'Italia ottiene il Veneto grazie all'alleanza con la
+                            Prussia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

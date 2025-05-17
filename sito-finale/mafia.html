@@ -4,133 +4,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Mafia - Unità d'Italia</title>
-    <link rel="stylesheet" href="style.css">
+    <title>MAFIA | L'UNITÀ D'ITALIA</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<nav class="navbar">
-    <a href="index.html" class="logo">L'UNITÀ D'ITALIA</a>
+    <nav class="navbar">
+        <a href="index.html" class="logo">L'UNITÀ D'ITALIA</a>
 
-    <div class="nav-links" id="navLinks">
-        <a href="unità.html" class="nav-link">L'Unità</a>
-        <a href="guerre.html" class="nav-link">Guerre</a>
-        <a href="patrioti.html" class="nav-link">Patrioti</a>
-        <a href="mafia.html" class="nav-link">La Mafia</a>
-        <a href="italia-moderna.html" class="nav-link">Italia Moderna</a>
-        <a href="cronologia.html" class="nav-link">Cronologia</a>
-        <a href="#" class="cta-button">ESPLORA</a>
+        <div class="nav-links" id="navLinks">
+            <a href="unità.html" class="nav-link">L'Unità</a>
+            <a href="guerre.html" class="nav-link">Guerre</a>
+            <a href="patrioti.html" class="nav-link">Patrioti</a>
+            <a href="mafia.html" class="nav-link">La Mafia</a>
+            <a href="italia-moderna.html" class="nav-link">Italia Moderna</a>
+            <a href="cronologia.html" class="nav-link">Cronologia</a>
+            <a href="#" class="cta-button">ESPLORA</a>
+        </div>
+
+        <div class="burger" id="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <div class="side-navigation">
+        <div class="side-nav-item active" data-section="origini"></div>
+        <div class="side-nav-item" data-section="unificazione"></div>
+        <div class="side-nav-item" data-section="piemonte"></div>
+        <div class="side-nav-item" data-section="documenti"></div>
     </div>
 
-    <div class="burger" id="burger">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-    </div>
-</nav>
-
-<div class="side-navigation">
-    <div class="side-nav-item active" data-section="origini"></div>
-    <div class="side-nav-item" data-section="unificazione"></div>
-    <div class="side-nav-item" data-section="piemonte"></div>
-    <div class="side-nav-item" data-section="documenti"></div>
-</div>
-
-<section id="origini" class="section" style="background-image: url('img/mafia.png');">
-    <div class="overlay"></div>
-    <div class="section-content">
-        <h2 class="section-title">Le Origini della Mafia</h2>
-        <div class="grid-container">
-            <div class="text-content">
-                <h3 class="content-title">Il Fenomeno Pre-unitario</h3>
-                <p class="content-text">La mafia siciliana affonda le sue radici nel sistema feudale borbonico, sviluppandosi come forma di controllo del territorio alternativa allo Stato.</p>
-                <p class="content-text">Prima dell'Unità, i "gabelloti" (affittuari delle terre) e i "campieri" (guardie armate) costituivano già una rete di potere parallela che sfruttava la debolezza dello Stato borbonico.</p>
-            </div>
-            <div class="media-content">
-                <iframe src="https://www.youtube.com/embed/FnlaH4D7gv8?start=120" allowfullscreen></iframe>
-            </div>
+    <div class="section" id="hero" style="background-image: url(img/mafia.jpg)">
+        <div class="overlay"></div>
+        <div class="section-content text-center">
+            <h1 class="hero-title">La Mafia nell'Unità d'Italia</h1>
+            <p class="hero-subtitle">Esplora il ruolo della mafia nella storia dell'Unità d'Italia e il suo impatto
+                sulla società</p>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
         </div>
     </div>
-    <div class="scroll-indicator">
-        <i class="fas fa-chevron-down"></i>
-    </div>
-</section>
 
-<section id="unificazione" class="section" style="background-image: url('https://res.cloudinary.com/aenetworks/image/upload/c_fill,ar_2,w_3840,h_1920,g_auto/dpr_auto/f_auto/q_auto:eco/v1/mafia-in-the-united-states-gettyimages-89857292?_a=BAVAZGDX0');">
-    <div class="overlay"></div>
-    <div class="section-content">
-        <h2 class="section-title">Mafia e Unificazione</h2>
-        <div class="grid-container">
-            <div class="text-content">
-                <h3 class="content-title">1860-1870</h3>
-                <p class="content-text">L'arrivo dei piemontesi in Sicilia dopo la spedizione dei Mille creò un vuoto di potere che la mafia seppe sfruttare. Il nuovo Stato unitario, visto come straniero, non riuscì a imporre la sua autorità.</p>
-                <p class="content-text">La mafia si presentò come mediatrice tra la popolazione e il nuovo governo, rafforzando così la sua influenza sul territorio.</p>
-            </div>
-            <div class="media-content">
-                <iframe src="https://www.youtube.com/embed/35YFemxSwVs" allowfullscreen></iframe>
+    <section id="origini" class="section" style="background-image: url('img/mafia/origini-mafia.png');">
+        <div class="overlay"></div>
+        <div class="section-content">
+            <h2 class="section-title">Le Origini della Mafia</h2>
+            <div class="grid-container">
+                <div class="text-content">
+                    <h3 class="content-title">Il Fenomeno Pre-unitario</h3>
+                    <p class="content-text">La mafia siciliana affonda le sue radici nel sistema feudale borbonico,
+                        sviluppandosi come forma di controllo del territorio alternativa allo Stato.</p>
+                    <p class="content-text">Prima dell'Unità, i "gabelloti" (affittuari delle terre) e i "campieri"
+                        (guardie armate) costituivano già una rete di potere parallela che sfruttava la debolezza dello
+                        Stato borbonico.</p>
+                </div>
+                <div class="media-content">
+                    <iframe src="https://www.youtube.com/embed/FnlaH4D7gv8?start=120" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="scroll-indicator">
-        <i class="fas fa-chevron-down"></i>
-    </div>
-</section>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
 
-<section id="piemonte" class="section dark-section">
-    <div class="overlay"></div>
-    <div class="section-content">
-        <h2 class="section-title">La Reazione Piemontese</h2>
-        <div class="card-container">
-            <div class="card">
-                <h3 class="card-title">La Legge Pica (1863)</h3>
-                <p class="card-text">Il governo italiano emanò la legge Pica per reprimere il brigantaggio al Sud, ma finì per colpire anche molti innocenti, alimentando il risentimento verso lo Stato unitario.</p>
-            </div>
-            <div class="card">
-                <h3 class="card-title">Inchiesta Franchetti-Sonnino</h3>
-                <p class="card-text">Nel 1876, i parlamentari Franchetti e Sonnino condussero la prima inchiesta ufficiale sulla mafia, descrivendola come "industria della violenza" che prosperava grazie alla debolezza dello Stato.</p>
-            </div>
-            <div class="card">
-                <h3 class="card-title">L'Incomprensione del Nord</h3>
-                <p class="card-text">I piemontesi interpretarono la mafia come semplice criminalità, senza comprenderne la natura di sistema di potere alternativo allo Stato.</p>
+    <section id="unificazione" class="section"
+        style="background-image: url('https://res.cloudinary.com/aenetworks/image/upload/c_fill,ar_2,w_3840,h_1920,g_auto/dpr_auto/f_auto/q_auto:eco/v1/mafia-in-the-united-states-gettyimages-89857292?_a=BAVAZGDX0');">
+        <div class="overlay"></div>
+        <div class="section-content">
+            <h2 class="section-title">Mafia e Unificazione</h2>
+            <div class="grid-container">
+                <div class="text-content">
+                    <h3 class="content-title">1860-1870</h3>
+                    <p class="content-text">L'arrivo dei piemontesi in Sicilia dopo la spedizione dei Mille creò un
+                        vuoto di potere che la mafia seppe sfruttare. Il nuovo Stato unitario, visto come straniero, non
+                        riuscì a imporre la sua autorità.</p>
+                    <p class="content-text">La mafia si presentò come mediatrice tra la popolazione e il nuovo governo,
+                        rafforzando così la sua influenza sul territorio.</p>
+                </div>
+                <div class="media-content">
+                    <iframe src="https://www.youtube.com/embed/35YFemxSwVs" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="scroll-indicator">
-        <i class="fas fa-chevron-down"></i>
-    </div>
-</section>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
 
-<section id="documenti" class="section" style="background-image: url('https://www.archiviodistatodipalermo.it/wp-content/uploads/2020/06/documenti-mafia.jpg');">
-    <div class="overlay"></div>
-    <div class="section-content">
-        <h2 class="section-title">Documenti Storici</h2>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <i class="fas fa-file-alt"></i>
-                <span class="number">1865</span>
-                <span class="label">Primi rapporti ufficiali che menzionano la "mafia"</span>
-            </div>
-            <div class="stat-item">
-                <i class="fas fa-gavel"></i>
-                <span class="number">1874</span>
-                <span class="label">Processo a banda mafiosa a Palermo</span>
-            </div>
-            <div class="stat-item">
-                <i class="fas fa-book"></i>
-                <span class="number">1876</span>
-                <span class="label">Pubblicazione inchiesta Franchetti-Sonnino</span>
-            </div>
-            <div class="stat-item">
-                <i class="fas fa-balance-scale"></i>
-                <span class="number">20+</span>
-                <span class="label">Leggi anti-mafia fallite (1861-1900)</span>
+    <section id="piemonte" class="section" style="background-image: url('img/mafia/torino-1860.jpeg');">
+        <div class="overlay"></div>
+        <div class="section-content">
+            <h2 class="section-title">La Reazione Piemontese</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3 class="card-title">La Legge Pica (1863)</h3>
+                    <p class="card-text">Il governo italiano emanò la legge Pica per reprimere il brigantaggio al Sud,
+                        ma finì per colpire anche molti innocenti, alimentando il risentimento verso lo Stato unitario.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Inchiesta Franchetti-Sonnino</h3>
+                    <p class="card-text">Nel 1876, i parlamentari Franchetti e Sonnino condussero la prima inchiesta
+                        ufficiale sulla mafia, descrivendola come "industria della violenza" che prosperava grazie alla
+                        debolezza dello Stato.</p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">L'Incomprensione del Nord</h3>
+                    <p class="card-text">I piemontesi interpretarono la mafia come semplice criminalità, senza
+                        comprenderne la natura di sistema di potere alternativo allo Stato.</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
 
-<script src="script.js"></script>
+    <section id="documenti" class="section"
+        style="background-image: url('https://www.archiviodistatodipalermo.it/wp-content/uploads/2020/06/documenti-mafia.jpg');">
+        <div class="overlay"></div>
+        <div class="section-content">
+            <h2 class="section-title">Documenti Storici</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <i class="fas fa-file-alt"></i>
+                    <span class="number">1865</span>
+                    <span class="label">Primi rapporti ufficiali che menzionano la "mafia"</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-gavel"></i>
+                    <span class="number">1874</span>
+                    <span class="label">Processo a banda mafiosa a Palermo</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-book"></i>
+                    <span class="number">1876</span>
+                    <span class="label">Pubblicazione inchiesta Franchetti-Sonnino</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-balance-scale"></i>
+                    <span class="number">20+</span>
+                    <span class="label">Leggi anti-mafia fallite (1861-1900)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
