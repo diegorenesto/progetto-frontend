@@ -698,7 +698,7 @@ body {
 }
 
 .mega-title {
-  font-size: 8rem;
+  font-size: 6rem;  /* ridotto da 8rem a 6rem */
   font-family: "Cinzel", serif;
   margin-bottom: 4rem;
   text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
@@ -1012,6 +1012,30 @@ body {
     width: 100% !important;
     height: 300px;
   }
+
+  .stats-gallery {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .stat-box.large {
+    height: auto;
+    padding: 2rem;
+  }
+
+  .stat-box.large .stat-number {
+    font-size: 6rem;
+    margin-bottom: 1rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .gallery-item {
+    aspect-ratio: 1;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1115,6 +1139,31 @@ body {
   .media-container iframe {
     height: 250px;
   }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item {
+    aspect-ratio: 16/9;
+  }
+
+  .mega-title {
+    font-size: 4rem;  /* ridotto da 6rem a 4rem su schermi piccoli */
+    margin-bottom: 3rem;
+  }
+
+  #garibaldi {
+    background-position: 40% center !important;
+  }
+
+  #vittorio {
+    background-position: 30% center !important;
+  }
+
+  .final-image {
+    height: 300px;  /* ridotta l'altezza su mobile */
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -1185,6 +1234,18 @@ body {
 
   .timeline-text {
     font-size: 1.2rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item {
+    aspect-ratio: 16/9;
+  }
+
+  .final-image {
+    height: 250px;  /* ulteriormente ridotta per schermi molto piccoli */
   }
 }
 
@@ -1540,7 +1601,7 @@ slider-handle::before {
     border-radius: 50%;
 }
 
-.slider-handle::after {
+slider-handle::after {
     content: '⇄';
     position: absolute;
     left: 50%;
@@ -1643,7 +1704,7 @@ sslider-handle::before {
     border-radius: 50%;
 }
 
-.slider-handle::after {
+slider-handle::after {
     content: '⇄';
     position: absolute;
     left: 50%;
@@ -2208,4 +2269,20 @@ sslider-handle::before {
 .modal-year {
     font-size: 1.8rem;
     color: white;
+}
+
+.nav-copyright {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.4rem;
+    padding: 1rem;
+}
+
+.nav-copyright i {
+    color: #e2b144;
+    margin-right: 5px;
 }

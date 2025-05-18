@@ -1,22 +1,79 @@
+// Debug info
+console.log('Window dimensions:', window.innerWidth, 'x', window.innerHeight);
+console.log('User Agent:', navigator.userAgent);
+console.log('Current URL:', window.location.href);
+
+// DOM
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM fully loaded');
+    console.time('Page Load Performance');
+    
+    // DOM Elements count
+    const allElements = document.getElementsByTagName('*');
+    console.log('Total DOM elements:', allElements.length);
+    
+    // Check viewport and device
+    const isMobile = window.matchMedia('(max-width: 500px)').matches;
+    console.log('Is Mobile Device:', isMobile);
+    
+    // Monitor scroll position
+    let lastScrollPosition = window.pageYOffset;
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        console.log('Scroll Position:', currentScroll);
+        lastScrollPosition = currentScroll;
+    });
+    
+    // Monitor window resize
+    window.addEventListener('resize', () => {
+        console.log('Window Resized to:', window.innerWidth, 'x', window.innerHeight);
+    });
+});
+
+// Performance monitoring
+window.addEventListener('load', () => {
+    console.timeEnd('Page Load Performance');
+    const performance = window.performance;
+    console.log('Page Load Timing:', performance.timing);
+});
+
 // burger menu
 const burger = document.querySelector('.burger');
 const navLinks = document.querySelector('.nav-links');
 
 burger.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-  burger.classList.toggle('toggle');
+    console.log('Menu toggle clicked');
+    navLinks.classList.toggle('active');
+    burger.classList.toggle('toggle');
+    
+    // esempio di monitoraggio dello stato del menu
+    const menuState = navLinks.classList.contains('active') ? 'opened' : 'closed';
+    console.log('Menu state:', menuState);
 });
 
-// effetto scroll della navbar
+// navbar scroll effect
 window.addEventListener("scroll", function () {
   const navbar = document.querySelector(".navbar");
   const heroSection = document.querySelector("#hero");
+
+  if (!heroSection) {
+    console.warn('Hero section not found in DOM');
+    return;
+  }
+
   const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+  const scrollPercentage = (window.scrollY / heroBottom) * 100;
+
+  console.log('Scroll percentage:', scrollPercentage.toFixed(2) + '%');
+
+  document.body.style.setProperty('--scroll', scrollPercentage + '%');
 
   if (window.scrollY > heroBottom) {
     navbar.classList.add("scrolled");
+    console.log('Navbar state: scrolled');
   } else {
     navbar.classList.remove("scrolled");
+    console.log('Navbar state: default');
   }
 });
 
@@ -66,11 +123,21 @@ navItems.forEach((item) => {
     const targetId = this.getAttribute("data-section");
     const targetElement = document.getElementById(targetId);
 
-    if (targetElement) {
-      window.scrollTo({
+    if (targetElement) { // controlla che l'elemento esista
+      // BOM and DOM interaction
+      updateHistory(targetId);
+
+      // Log element properties
+      const rect = targetElement.getBoundingClientRect();
+      console.log('Target section bounds:', rect);
+
+      window.scrollTo({ // scrolla alla sezione
         top: targetElement.offsetTop,
         behavior: "smooth",
       });
+
+      // DOM manipulation for visual feedback
+      targetElement.style.animation = 'highlight 0.5s ease';
     }
   });
 });
@@ -149,14 +216,39 @@ photoItems.forEach(item => {
     });
 });
 
-modalClose.addEventListener('click', () => {
-    photoModal.style.display = 'none';
-    document.body.style.overflow = 'auto';
-});
 
-photoModal.addEventListener('click', (e) => {
-    if (e.target === photoModal) {
-        photoModal.style.display = 'none';
-        document.body.style.overflow = 'auto';
+// BOM History API usage
+// Funzione per aggiornare la cronologia e modificare l'URL senza ricaricare la pagina
+const updateHistory = (sectionId) => {
+    const newUrl = `${window.location.pathname}#${sectionId}`;
+    window.history.pushState({ section: sectionId }, '', newUrl);
+    console.log('History updated:', sectionId);
+};
+
+// Storage API usage
+// Funzione per salvare le preferenze dell'utente
+const saveUserPreferences = () => {
+    const preferences = {
+        theme: 'dark',
+        fontSize: window.getComputedStyle(document.body).fontSize
+    };
+    localStorage.setItem('userPrefs', JSON.stringify(preferences));
+    console.log('Preferences saved:', preferences);
+};
+
+// carica le preferenze dell'utente
+const loadUserPreferences = () => {
+    const savedPrefs = localStorage.getItem('userPrefs');
+    if (savedPrefs) {
+        const prefs = JSON.parse(savedPrefs);
+        console.log('Loaded preferences:', prefs);
+        return prefs;
     }
+    return null;
+};
+
+
+// API visibilità documento
+document.addEventListener('visibilitychange', () => {
+    console.log('Page visibility:', document.visibilityState);
 });
