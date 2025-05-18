@@ -112,55 +112,151 @@
     </div>
 </section>
 
+<!-- Sezione dettagli stato (inizialmente nascosta) -->
+<section id="dettagli-stato" class="section dark-section" style="display:none; background-color:#111;">
+    <div class="section-content">
+        <div class="grid-container">
+            <div class="text-content">
+                <h2 id="dettagli-titolo" class="section-title"></h2>
+                <div id="dettagli-contenuto"></div>
+            </div>
+            <div class="media-content">
+                <div id="dettagli-media" class="image-container"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
     <script>
         // Contenuti per ogni stato
         const regionContents = {
             "piemonte": {
                 title: "Regno di Piemonte (inclusa Sardegna)",
+                leader: "Vittorio Emanuele II di Savoia",
+                leaderDesc: "Ultimo Re di Sardegna e primo Re d'Italia, noto come 'Il Re Galantuomo' per il suo sostegno alla causa nazionale.",
                 html: `<p>
-                    Il Regno di Piemonte, guidato dalla dinastia dei Savoia, comprendeva anche la Sardegna, la Liguria, la Savoia e Nizza. 
-                    Fu il motore principale del processo di unificazione italiana, grazie a figure come Cavour e Vittorio Emanuele II.
+                    Il Regno di Sardegna, guidato dalla dinastia dei Savoia, era lo stato più progressista della penisola, con una costituzione (Statuto Albertino) e un governo parlamentare. Vittorio Emanuele II e il suo primo ministro Camillo Benso, Conte di Cavour, furono i principali artefici dell'Unità d'Italia.
                 </p>
                 <ul>
                     <li><b>Capitale:</b> Torino (continente), Cagliari (Sardegna)</li>
-                    <li><b>Ruolo nel Risorgimento:</b> Guida politica e militare dell'Unità d'Italia</li>
-                </ul>`
+                    <li><b>Popolazione (1860):</b> ~4.5 milioni</li>
+                    <li><b>Economia:</b> Agricoltura avanzata, prime industrie tessili e metallurgiche</li>
+                    <li><b>Forza militare:</b> Esercito ben organizzato (~100.000 uomini)</li>
+                </ul>`,
+                details: `<div class="timeline-container">
+                    <h3 style="color:#e2b144;margin-bottom:2rem;">Storia e Caratteristiche</h3>
+                    <p>Il Regno di Sardegna, sotto la guida di Cavour, attuò importanti riforme modernizzatrici:</p>
+                    <ul style="margin:2rem 0;padding-left:2rem;">
+                        <li>Costruzione di ferrovie e infrastrutture</li>
+                        <li>Riforma del sistema fiscale e amministrativo</li>
+                        <li>Libero scambio con le potenze europee</li>
+                        <li>Sostegno alla cultura e all'istruzione</li>
+                    </ul>
+                    <p>Durante il Risorgimento, il Piemonte divenne il punto di riferimento per i patrioti italiani e il motore del processo di unificazione, grazie anche all'alleanza con la Francia di Napoleone III.</p>
+                    <div class="feature-box" style="margin-top:3rem;">
+                        <div>
+                            <h4 style="color:#e2b144;margin-bottom:1rem;">Statuto Albertino</h4>
+                            <p>Concesso da Carlo Alberto nel 1848, fu la prima costituzione italiana e rimase in vigore fino al 1946. Garantiva libertà civili e un sistema parlamentare bicamerale.</p>
+                        </div>
+                    </div>
+                </div>`,
+                media: `<img src="img/unità/vittorio_emanuele_ii.jpg" alt="Vittorio Emanuele II" style="width:100%;height:100%;object-fit:cover;">`
             },
             "austria": {
-                title: "Italia occupata dagli Austriaci",
+                title: "Regno Lombardo-Veneto (dominio austriaco)",
+                leader: "Francesco Giuseppe I d'Austria",
+                leaderDesc: "Imperatore d'Austria dal 1848 al 1916, noto per il suo governo conservatore e centralizzato.",
                 html: `<p>
-                    L'Impero austriaco controllava il Regno Lombardo-Veneto e altre regioni del Nord-Est, tra cui il Trentino e il Friuli. 
-                    Queste zone erano tra le più ricche e industrializzate, ma anche teatro di rivolte e moti patriottici.
+                    Il Lombardo-Veneto era la parte più ricca e sviluppata della penisola, ma anche la più oppressa dal dominio straniero. Vienna governava attraverso un viceré e un apparato burocratico-militare che suscitava malcontento tra la popolazione.
                 </p>
                 <ul>
                     <li><b>Capitale:</b> Milano (Lombardia), Venezia (Veneto)</li>
-                    <li><b>Dominio:</b> Impero d'Austria</li>
-                    <li><b>Ruolo:</b> Centro delle rivoluzioni del 1848 e delle guerre d'indipendenza</li>
-                </ul>`
+                    <li><b>Popolazione (1860):</b> ~5 milioni</li>
+                    <li><b>Economia:</b> Agricoltura avanzata, industria manifatturiera</li>
+                    <li><b>Forza militare:</b> Guarnigioni austriache (~150.000 uomini)</li>
+                </ul>`,
+                details: `<div class="timeline-container">
+                    <h3 style="color:#e2b144;margin-bottom:2rem;">Dominio e Resistenza</h3>
+                    <p>L'Austria controllava direttamente il Lombardo-Veneto attraverso:</p>
+                    <ul style="margin:2rem 0;padding-left:2rem;">
+                        <li>Un rigido sistema di censura e polizia</li>
+                        <li>Pesanti tasse per finanziare l'impero</li>
+                        <li>Esclusione degli italiani dagli alti gradi amministrativi</li>
+                        <li>Repressione di ogni movimento patriottico</li>
+                    </ul>
+                    <p>Nonostante la repressione, queste regioni furono il cuore dei moti del 1848 e delle guerre d'indipendenza. Milano con le "Cinque Giornate" e Venezia con la resistenza repubblicana dimostrarono la forte volontà di indipendenza.</p>
+                    <div class="feature-box" style="margin-top:3rem;">
+                        <div>
+                            <h4 style="color:#e2b144;margin-bottom:1rem;">Le Cinque Giornate di Milano</h4>
+                            <p>Dal 18 al 22 marzo 1848, i milanesi insorsero cacciando temporaneamente gli austriaci dalla città, in una delle più gloriose pagine del Risorgimento.</p>
+                        </div>
+                    </div>
+                </div>`,
+                media: `<img src="img/unità/francesco_giuseppe.jpg" alt="Francesco Giuseppe I" style="width:100%;height:100%;object-fit:cover;">`
             },
             "pontificio": {
                 title: "Stato Pontificio",
+                leader: "Papa Pio IX",
+                leaderDesc: "Pontefice dal 1846 al 1878, inizialmente riformatore poi diventato simbolo dell'opposizione all'Unità d'Italia.",
                 html: `<p>
-                    Lo Stato Pontificio era governato dal Papa e comprendeva gran parte dell'Italia centrale, inclusa Roma. 
-                    Fu uno degli ultimi stati ad essere annesso al Regno d'Italia, nel 1870.
+                    Lo Stato della Chiesa era un'anomalia nell'Europa moderna: una teocrazia dove il Papa esercitava potere temporale e spirituale. Pio IX, dopo un inizio riformatore, diventò il principale oppositore del movimento nazionale italiano.
                 </p>
                 <ul>
                     <li><b>Capitale:</b> Roma</li>
-                    <li><b>Governo:</b> Teocrazia (Papa)</li>
-                    <li><b>Ruolo:</b> Ostile all'unificazione, fu annesso solo dopo la Breccia di Porta Pia</li>
-                </ul>`
+                    <li><b>Popolazione (1860):</b> ~3 milioni</li>
+                    <li><b>Economia:</b> Agricoltura arretrata, economia basata sulle rendite</li>
+                    <li><b>Forza militare:</b> Esercito pontificio (~15.000 uomini) e volontari cattolici</li>
+                </ul>`,
+                details: `<div class="timeline-container">
+                    <h3 style="color:#e2b144;margin-bottom:2rem;">Potere e Crisi</h3>
+                    <p>Lo Stato Pontificio era caratterizzato da:</p>
+                    <ul style="margin:2rem 0;padding-left:2rem;">
+                        <li>Un sistema di governo teocratico e assoluto</li>
+                        <li>Assenza di costituzione e parlamento</li>
+                        <li>Controllo dell'istruzione e della cultura</li>
+                        <li>Opposizione alle idee liberali e nazionali</li>
+                    </ul>
+                    <p>Dopo la perdita delle Legazioni nel 1859 e l'annessione delle Marche e dell'Umbria nel 1860, rimase solo il Lazio sotto il controllo del Papa, protetto dalle truppe francesi fino alla Presa di Roma nel 1870.</p>
+                    <div class="feature-box" style="margin-top:3rem;">
+                        <div>
+                            <h4 style="color:#e2b144;margin-bottom:1rem;">Il Sillabo (1864)</h4>
+                            <p>Documento in cui Pio IX condannava le principali idee moderne, tra cui liberalismo, socialismo e libertà religiosa, accentuando il conflitto con lo Stato italiano.</p>
+                        </div>
+                    </div>
+                </div>`,
+                media: `<img src="img/unità/pio_ix.jpg" alt="Papa Pio IX" style="width:100%;height:100%;object-fit:cover;">`
             },
             "due-sicilie": {
                 title: "Regno delle Due Sicilie",
+                leader: "Francesco II di Borbone",
+                leaderDesc: "Ultimo Re delle Due Sicilie, salito al trono nel 1859 e deposto da Garibaldi nel 1860.",
                 html: `<p>
-                    Il Regno delle Due Sicilie era il più grande stato italiano per estensione e popolazione, comprendendo tutto il Sud e la Sicilia. 
-                    Governato dai Borbone, fu conquistato da Garibaldi nel 1860.
+                    Il più grande e popoloso stato italiano era anche il più arretrato economicamente e politicamente. Governato dai Borbone con metodi assolutisti, fu conquistato da Garibaldi nel 1860 in una delle imprese più audaci del Risorgimento.
                 </p>
                 <ul>
                     <li><b>Capitale:</b> Napoli (continentale), Palermo (Sicilia)</li>
-                    <li><b>Dinastia:</b> Borbone</li>
-                    <li><b>Ruolo:</b> Conquista decisiva per l'Unità grazie alla Spedizione dei Mille</li>
-                </ul>`
+                    <li><b>Popolazione (1860):</b> ~9 milioni</li>
+                    <li><b>Economia:</b> Agricoltura feudale, quasi assenza di industrie</li>
+                    <li><b>Forza militare:</b> Esercito numeroso (~150.000 uomini) ma mal organizzato</li>
+                </ul>`,
+                details: `<div class="timeline-container">
+                    <h3 style="color:#e2b144;margin-bottom:2rem;">Caratteristiche e Caduta</h3>
+                    <p>Il Regno borbonico presentava gravi problemi:</p>
+                    <ul style="margin:2rem 0;padding-left:2rem;">
+                        <li>Assolutismo monarchico senza costituzione</li>
+                        <li>Corruzione e inefficienza amministrativa</li>
+                        <li>Assenza di strade e infrastrutture moderne</li>
+                        <li>Analfabetismo diffuso (oltre l'80% della popolazione)</li>
+                    </ul>
+                    <p>La Spedizione dei Mille (1860) mostrò la debolezza del regime: in pochi mesi Garibaldi conquistò tutto il regno con l'appoggio della popolazione. L'annessione al Piemonte fu sancita da plebisciti popolari.</p>
+                    <div class="feature-box" style="margin-top:3rem;">
+                        <div>
+                            <h4 style="color:#e2b144;margin-bottom:1rem;">La Questione Meridionale</h4>
+                            <p>L'unificazione rivelò il divario tra Nord e Sud, dando origine a un problema che segnerà tutta la storia dell'Italia unita.</p>
+                        </div>
+                    </div>
+                </div>`,
+                media: `<img src="img/unità/francesco_ii.jpg" alt="Francesco II di Borbone" style="width:100%;height:100%;object-fit:cover;">`
             }
         };
 
@@ -182,6 +278,19 @@
             section.style.backgroundPosition = "center";
         }
 
+        // Mostra/nascondi la sezione dettagli
+        function toggleDetailsSection(show) {
+            const section = document.getElementById('dettagli-stato');
+            section.style.display = show ? 'flex' : 'none';
+            
+            if (show) {
+                // Scorri fino alla sezione dettagli
+                setTimeout(() => {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                }, 300);
+            }
+        }
+
         // Inizializza sfondo di default
         setSectionBg("default");
 
@@ -193,11 +302,47 @@
                 const key = this.id;
                 const content = regionContents[key];
                 const panel = document.getElementById('content-panel');
+                
                 if (content) {
-                    panel.innerHTML = `<h1 style="font-family:'Cinzel',serif;font-size:2.5rem;color:#e2b144;margin-bottom:2rem;">${content.title}</h1>${content.html}`;
+                    // Aggiorna il pannello principale
+                    panel.innerHTML = `
+                        <h1 style="font-family:'Cinzel',serif;font-size:2.5rem;color:#e2b144;margin-bottom:2rem;">${content.title}</h1>
+                        <h3 style="font-family:'Cinzel',serif;color:#e2b144;margin-bottom:1rem;">${content.leader}</h3>
+                        <p style="font-style:italic;margin-bottom:1.5rem;">${content.leaderDesc}</p>
+                        ${content.html}
+                        <button class="btn" onclick="document.getElementById('dettagli-stato').scrollIntoView({behavior:'smooth'})" style="margin-top:2rem;">Scopri di più</button>
+                    `;
+                    
+                    // Aggiorna la sezione dettagli
+                    document.getElementById('dettagli-titolo').textContent = content.title;
+                    document.getElementById('dettagli-contenuto').innerHTML = content.details;
+                    document.getElementById('dettagli-media').innerHTML = content.media;
+                    
+                    // Mostra la sezione dettagli
+                    toggleDetailsSection(true);
                 }
+                
                 setSectionBg(key);
             });
+        });
+
+        // Resetta tutto quando si clicca su un'area non mappata
+        document.getElementById('mappa').addEventListener('click', function(e) {
+            if (e.target === this) {
+                document.querySelectorAll('.map-region').forEach(r => r.classList.remove('selected'));
+                const panel = document.getElementById('content-panel');
+                panel.innerHTML = `
+                    <h1 style="font-family:'Cinzel',serif;font-size:2.5rem;color:#e2b144;margin-bottom:2rem;">L'Italia prima dell'Unità</h1>
+                    <p>
+                        Prima del 1861, la penisola italiana era suddivisa in numerosi stati indipendenti, ciascuno con
+                        la propria storia, cultura e governo.<br><br>
+                        Clicca su una regione della mappa per scoprire la storia e le caratteristiche di ciascuno stato
+                        preunitario.
+                    </p>
+                `;
+                setSectionBg("default");
+                toggleDetailsSection(false);
+            }
         });
     </script>
     <script src="script.js"></script>

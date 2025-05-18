@@ -216,6 +216,20 @@ photoItems.forEach(item => {
     });
 });
 
+// CHIUSURA FOTO ULTIMA SEZIONE ESPLORA.HTML
+// Fix: chiusura modale al click sulla X e fuori dall'immagine
+modalClose.addEventListener('click', () => {
+    photoModal.style.display = 'none';
+    document.body.style.overflow = '';
+});
+
+// opzionale: chiudi la modale cliccando fuori dal contenuto
+photoModal.addEventListener('click', (e) => {
+    if (e.target === photoModal) {
+        photoModal.style.display = 'none';
+        document.body.style.overflow = '';
+    }
+});
 
 // BOM History API usage
 // Funzione per aggiornare la cronologia e modificare l'URL senza ricaricare la pagina
