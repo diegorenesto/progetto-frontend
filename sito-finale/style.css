@@ -1164,6 +1164,10 @@ body {
   .final-image {
     height: 300px;  /* ridotta l'altezza su mobile */
   }
+
+  .personaggio-card .image-container img {
+    object-position: top center;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -2285,4 +2289,15 @@ slider-handle::after {
 .nav-copyright i {
     color: #e2b144;
     margin-right: 5px;
+}
+
+/* RESPONSIVENESS */
+.personaggio-card .image-container {
+  height: 250px;
+}
+
+@media screen and (max-width: 768px) {
+  .personaggio-card .image-container img {
+    object-position: top center;
+  }
 }
