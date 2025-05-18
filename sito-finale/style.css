@@ -346,6 +346,29 @@ body {
   gap: 2rem;
 }
 
+/* Aumenta l'altezza delle immagini nella sezione dettagli stato */
+#dettagli-stato .image-container {
+  height: 380px;
+  min-height: 320px;
+  max-height: 420px;
+  width: 100%;
+  overflow: hidden;
+  border: 2px solid #e2b144;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.5);
+}
+
+#dettagli-stato .image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
 .personaggio-card {
   background-color: rgba(0, 0, 0, 0.7);
   border: 1px solid #e2b144;
@@ -1178,6 +1201,12 @@ body {
 
   .personaggio-card .image-container img {
     object-position: top center;
+  }
+
+  #dettagli-stato .image-container {
+    height: 240px;
+    min-height: 180px;
+    max-height: 260px;
   }
 }
 
@@ -2334,106 +2363,109 @@ slider-handle::after {
 
 /* Mappa responsive styles */
 #mappa-flex-container {
-    display: flex;
-    flex-direction: column;
-    min-height: auto;
-    height: auto;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: auto;
+  height: auto;
+  width: 100%;
 }
 
 @media screen and (min-width: 992px) {
-    #mappa-flex-container {
-        flex-direction: row;
-        min-height: 700px;
-        height: 80vh;
-    }
+  #mappa-flex-container {
+    flex-direction: row;
+    min-height: 700px;
+    height: 80vh;
+  }
 }
 
 #content-panel {
-    flex-basis: 100%;
-    max-width: 100%;
-    padding: 3rem 2rem;
-    order: 1;
+  flex-basis: 100%;
+  font-size: 2rem;
+  max-width: 100%;
+  padding: 3rem 2rem;
+  order: 1;
 }
 
 @media screen and (min-width: 992px) {
-    #content-panel {
-        flex-basis: 50%;
-        max-width: 50%;
-        order: 0;
-    }
+  #content-panel {
+    flex-basis: 50%;
+    max-width: 50%;
+    order: 0;
+  }
 }
 
 .map-container {
-    flex-basis: 100%;
-    max-width: 100%;
-    height: auto;
-    min-height: 500px;
-    position: relative;
-    order: 0;
+  flex-basis: 100%;
+  max-width: 100%;
+  height: auto;
+  min-height: 500px;
+  position: relative;
+  order: 0;
 }
 
 @media screen and (min-width: 992px) {
-    .map-container {
-        flex-basis: 50%;
-        max-width: 50%;
-        order: 1;
-        height: 95vh;
-        max-height: 95vh;
-    }
+  .map-container {
+    flex-basis: 50%;
+    max-width: 50%;
+    order: 1;
+    height: 95vh;
+    max-height: 95vh;
+  }
 }
 
 .map-wrapper {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    padding-top: 100%; /* Mantiene aspect ratio 1:1 di base */
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-top: 100%;
+  /* Mantiene aspect ratio 1:1 di base */
 }
 
 @media screen and (min-width: 768px) {
-    .map-wrapper {
-        padding-top: 80%;
-    }
+  .map-wrapper {
+    padding-top: 80%;
+  }
 }
 
 @media screen and (min-width: 992px) {
-    .map-wrapper {
-        padding-top: 0;
-        height: 95vh;
-        max-height: 95vh;
-    }
+  .map-wrapper {
+    padding-top: 0;
+    height: 95vh;
+    max-height: 95vh;
+  }
 }
 
-.map-bg-img, .italy-map {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+.map-bg-img,
+.italy-map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .map-bg-img {
-    z-index: 1;
-    height: 90%;
+  z-index: 1;
+  height: 90%;
 }
 
 .italy-map {
-    z-index: 2;
+  z-index: 2;
 }
 
 /* Miglioramenti per la mappa SVG */
 .italy-map polygon {
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .italy-map polygon:hover {
-    opacity: 0.8;
-    stroke-width: 3px;
+  opacity: 0.8;
+  stroke-width: 3px;
 }
 
 .italy-map polygon.selected {
-    opacity: 0.9;
-    stroke-width: 4px;
-    stroke: #fff;
+  opacity: 0.9;
+  stroke-width: 4px;
+  stroke: #fff;
 }

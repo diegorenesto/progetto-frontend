@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>L'Italia Preunitaria - Stati e Storia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -32,8 +33,8 @@
     <div class="side-navigation">
         <div class="side-nav-item active" data-section="hero"></div>
         <div class="side-nav-item" data-section="mappa"></div>
+        <div class="side-nav-item" data-section="dettagli-stato"></div>
     </div>
-
     <!-- Hero Section -->
     <section id="hero" class="section"
         style="background-image: url('img/unità/bersaglieri.jpeg'); background-position: center 10%;">
@@ -49,89 +50,95 @@
     </section>
 
     <!-- Mappa e Stati Preunitari -->
-<section id="mappa" class="section dark-section" style="padding:0; background-image: url('img/unità/presa_roma.jpg'); background-size: cover; background-position: center;">
-    <div class="overlay"></div>
-    <div class="section-content" style="max-width:none;width:100%;padding:0;">
-        <div id="mappa-flex-container">
-            <!-- Colonna destra: mappa con sfondo -->
-            <div class="map-container">
-                <div class="map-wrapper">
-                    <img src="italy_1860.png" alt="Mappa Italia 1860" class="map-bg-img">
-                    <svg class="italy-map" viewBox="0 0 950 1000" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Sardegna -->
-                        <a href="#" data-region="piemonte">
-                            <polygon class="map-region" id="piemonte"
-                                points="251,664,228,655,225,640,225,618,230,596,230,576,230,558,221,546,222,521,238,487,258,510,295,481,318,498,322,530,323,572,314,606,301,650,277,647,266,665"
-                                style="opacity:0" />
-                        </a>
-                        <!-- Piemonte (continente) -->
-                        <a href="#" data-region="piemonte">
-                            <polygon class="map-region" id="piemonte"
-                                points="413,419,403,413,407,402,404,390,396,385,387,383,387,372,376,373,379,357,379,345,368,331,366,313,366,297,358,287,347,283,332,271,318,260,299,255,285,255,273,263,260,274,253,288,238,292,218,299,210,287,221,276,199,258,197,241,202,228,188,209,207,195,213,178,208,160,200,152,211,137,229,137,244,136,257,138,270,125,277,111,290,103,298,133,306,123,313,127,310,146,318,137,331,123,334,109,344,108,354,124,359,115,368,120,376,128,376,113,376,103,385,100,396,107,403,120,397,133,393,150,399,165,407,162,396,176,396,185,403,189,401,199,405,207,401,218,404,225,412,223,424,226,437,226,449,229,461,227,473,230,483,234,489,239,485,250,483,263,481,276,487,284,491,292,497,299,501,305,506,311,501,317,491,313,485,309,474,309,470,316,479,319,486,323,478,327,472,332,473,338,473,345,469,352,465,358,461,365,456,372,456,380,450,386,445,393,440,401,433,409,428,414,421,419"
-                                style="opacity:0" />
-                        </a>
-                        <!-- Sicilia -->
-                        <a href="#" data-region="due-sicilie">
-                            <polygon class="map-region" id="due-sicilie"
-                                points="575,823,580,830,588,838,604,840,618,841,623,826,623,809,617,797,614,786,625,772,633,756,641,734,644,723,632,720,622,726,607,728,593,728,581,735,565,738,552,739,534,738,530,733,521,726,512,721,502,725,487,730,473,723,467,731,456,742,457,751,455,763,462,774,498,784,528,806,564,817"
-                                style="opacity:0" />
-                        </a>
-                        <!-- Due Sicilie (continente) -->
-                        <a href="#" data-region="due-sicilie">
-                            <polygon class="map-region" id="due-sicilie"
-                                points="649,728,654,724,656,716,660,711,664,706,660,700,665,695,671,694,676,691,682,691,684,686,686,678,682,668,676,657,674,647,670,638,665,630,661,619,660,609,657,601,654,596,648,596,644,603,638,603,628,601,628,595,621,589,615,589,607,583,609,575,614,570,609,563,607,554,601,551,593,553,587,554,575,558,578,551,585,548,585,541,581,534,575,533,567,536,563,530,556,521,552,513,549,507,541,505,535,505,529,503,522,501,522,495,521,487,528,494,530,487,536,487,539,482,539,475,544,470,538,465,531,462,529,454,522,449,515,443,515,436,515,426,513,417,507,415,505,408,503,400,515,402,522,397,527,393,533,393,538,397,544,394,553,389,559,387,563,394,565,402,565,408,570,408,574,416,578,422,585,422,587,427,590,433,591,439,597,440,603,440,609,446,614,451,620,451,624,456,630,458,634,462,639,459,646,457,654,458,659,461,670,461,678,461,684,461,684,467,683,473,676,475,670,479,672,485,675,490,680,491,681,497,686,501,693,503,699,508,705,510,713,513,719,513,725,518,730,517,736,518,742,523,747,528,751,532,757,536,764,539,769,542,776,548,782,552,788,555,793,563,798,566,804,575,810,581,810,591,812,601,810,616,801,615,793,609,784,603,786,595,784,588,780,581,771,576,765,579,756,579,750,574,740,574,745,567,741,560,737,564,726,564,723,572,716,580,712,588,708,596,709,606,700,613,700,621,709,624,715,628,724,628,731,632,738,636,740,645,740,653,736,660,738,666,740,672,731,676,722,672,714,678,703,685,706,697,706,710,702,719,694,722,687,728,681,735,677,742,674,749,668,752,659,754,650,752,642,743,648,736"
-                                style="opacity:0" />
-                        </a>
-                        <!-- Austria -->
-                        <a href="#" data-region="austria">
-                            <polygon class="map-region" id="austria"
-                                points="408,161,401,169,395,176,395,185,401,188,401,194,401,201,405,207,403,213,401,221,407,224,413,221,420,224,428,224,436,225,444,229,452,228,460,226,467,227,474,229,483,233,489,239,492,233,490,225,486,216,485,209,484,201,482,193,486,189,493,189,501,189,498,195,507,190,512,187,521,187,527,184,532,183,531,177,536,176,542,178,546,169,549,160,553,153,558,146,551,141,551,135,554,130,553,123,546,119,541,113,535,114,530,111,523,108,514,107,508,103,500,103,493,104,486,107,481,112,475,116,469,118,463,123,462,129,466,138,465,144,458,143,458,148,453,151,445,150,441,154,437,159,432,159,430,164,423,167,417,170"
-                                style="opacity:0" />
-                        </a>
-                        <!-- Stato Pontificio -->
-                        <a href="#" data-region="pontificio">
-                            <polygon class="map-region" id="pontificio"
-                                points="506,309,502,315,493,313,490,305,478,306,472,307,468,311,473,316,482,318,482,325,473,331,471,336,474,341,471,345,468,354,463,359,460,367,457,372,456,380,451,384,444,385,445,393,443,400,436,405,430,407,424,413,419,417,426,419,434,419,437,425,440,431,446,441,452,447,458,450,462,455,462,461,466,467,470,471,476,473,481,478,484,483,484,491,490,491,496,493,504,500,504,505,510,505,518,500,525,496,520,489,531,494,530,486,537,486,540,479,543,470,538,467,531,464,530,455,521,451,515,444,515,436,515,428,510,422,513,416,506,416,505,409,502,402,506,399,512,401,517,402,521,396,526,394,532,393,537,396,542,396,548,391,555,389,562,385,559,376,555,367,553,358,548,350,549,341,542,334,535,327,525,322,518,311,511,307"
-                                style="opacity:0" />
-                        </a>
-                    </svg>
+    <section id="mappa" class="section dark-section" style="padding:0; background-image: url('img/unità/presa_roma.jpg'); background-size: cover; background-position: center;font-size: 1.3rem;
+            line-height: 1.7;">
+        <div class="overlay"></div>
+        <div class="section-content" style="max-width:none;width:100%;padding:0;">
+            <div id="mappa-flex-container">
+                <!-- Colonna destra: mappa con sfondo -->
+                <div class="map-container">
+                    <div class="map-wrapper">
+                        <img src="italy_1860.png" alt="Mappa Italia 1860" class="map-bg-img">
+                        <svg class="italy-map" viewBox="0 0 950 1000" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Sardegna -->
+                            <a href="#" data-region="sardegna">
+                                <polygon class="map-region" id="sardegna"
+                                    points="251,664,228,655,225,640,225,618,230,596,230,576,230,558,221,546,222,521,238,487,258,510,295,481,318,498,322,530,323,572,314,606,301,650,277,647,266,665"
+                                    style="opacity:0" />
+                            </a>
+                            <!-- Piemonte (continente) -->
+                            <a href="#" data-region="sardegna">
+                                <polygon class="map-region" id="sardegna"
+                                    points="413,419,403,413,407,402,404,390,396,385,387,383,387,372,376,373,379,357,379,345,368,331,366,313,366,297,358,287,347,283,332,271,318,260,299,255,285,255,273,263,260,274,253,288,238,292,218,299,210,287,221,276,199,258,197,241,202,228,188,209,207,195,213,178,208,160,200,152,211,137,229,137,244,136,257,138,270,125,277,111,290,103,298,133,306,123,313,127,310,146,318,137,331,123,334,109,344,108,354,124,359,115,368,120,376,128,376,113,376,103,385,100,396,107,403,120,397,133,393,150,399,165,407,162,396,176,396,185,403,189,401,199,405,207,401,218,404,225,412,223,424,226,437,226,449,229,461,227,473,230,483,234,489,239,485,250,483,263,481,276,487,284,491,292,497,299,501,305,506,311,501,317,491,313,485,309,474,309,470,316,479,319,486,323,478,327,472,332,473,338,473,345,469,352,465,358,461,365,456,372,456,380,450,386,445,393,440,401,433,409,428,414,421,419"
+                                    style="opacity:0" />
+                            </a>
+                            <!-- Sicilia -->
+                            <a href="#" data-region="due-sicilie">
+                                <polygon class="map-region" id="due-sicilie"
+                                    points="575,823,580,830,588,838,604,840,618,841,623,826,623,809,617,797,614,786,625,772,633,756,641,734,644,723,632,720,622,726,607,728,593,728,581,735,565,738,552,739,534,738,530,733,521,726,512,721,502,725,487,730,473,723,467,731,456,742,457,751,455,763,462,774,498,784,528,806,564,817"
+                                    style="opacity:0" />
+                            </a>
+                            <!-- Due Sicilie (continente) -->
+                            <a href="#" data-region="due-sicilie">
+                                <polygon class="map-region" id="due-sicilie"
+                                    points="649,728,654,724,656,716,660,711,664,706,660,700,665,695,671,694,676,691,682,691,684,686,686,678,682,668,676,657,674,647,670,638,665,630,661,619,660,609,657,601,654,596,648,596,644,603,638,603,628,601,628,595,621,589,615,589,607,583,609,575,614,570,609,563,607,554,601,551,593,553,587,554,575,558,578,551,585,548,585,541,581,534,575,533,567,536,563,530,556,521,552,513,549,507,541,505,535,505,529,503,522,501,522,495,521,487,528,494,530,487,536,487,539,482,539,475,544,470,538,465,531,462,529,454,522,449,515,443,515,436,515,426,513,417,507,415,505,408,503,400,515,402,522,397,527,393,533,393,538,397,544,394,553,389,559,387,563,394,565,402,565,408,570,408,574,416,578,422,585,422,587,427,590,433,591,439,597,440,603,440,609,446,614,451,620,451,624,456,630,458,634,462,639,459,646,457,654,458,659,461,670,461,678,461,684,461,684,467,683,473,676,475,670,479,672,485,675,490,680,491,681,497,686,501,693,503,699,508,705,510,713,513,719,513,725,518,730,517,736,518,742,523,747,528,751,532,757,536,764,539,769,542,776,548,782,552,788,555,793,563,798,566,804,575,810,581,810,591,812,601,810,616,801,615,793,609,784,603,786,595,784,588,780,581,771,576,765,579,756,579,750,574,740,574,745,567,741,560,737,564,726,564,723,572,716,580,712,588,708,596,709,606,700,613,700,621,709,624,715,628,724,628,731,632,738,636,740,645,740,653,736,660,738,666,740,672,731,676,722,672,714,678,703,685,706,697,706,710,702,719,694,722,687,728,681,735,677,742,674,749,668,752,659,754,650,752,642,743,648,736"
+                                    style="opacity:0" />
+                            </a>
+                            <!-- Austria -->
+                            <a href="#" data-region="austria">
+                                <polygon class="map-region" id="austria"
+                                    points="408,161,401,169,395,176,395,185,401,188,401,194,401,201,405,207,403,213,401,221,407,224,413,221,420,224,428,224,436,225,444,229,452,228,460,226,467,227,474,229,483,233,489,239,492,233,490,225,486,216,485,209,484,201,482,193,486,189,493,189,501,189,498,195,507,190,512,187,521,187,527,184,532,183,531,177,536,176,542,178,546,169,549,160,553,153,558,146,551,141,551,135,554,130,553,123,546,119,541,113,535,114,530,111,523,108,514,107,508,103,500,103,493,104,486,107,481,112,475,116,469,118,463,123,462,129,466,138,465,144,458,143,458,148,453,151,445,150,441,154,437,159,432,159,430,164,423,167,417,170"
+                                    style="opacity:0" />
+                            </a>
+                            <!-- Stato Pontificio -->
+                            <a href="#" data-region="pontificio">
+                                <polygon class="map-region" id="pontificio"
+                                    points="506,309,502,315,493,313,490,305,478,306,472,307,468,311,473,316,482,318,482,325,473,331,471,336,474,341,471,345,468,354,463,359,460,367,457,372,456,380,451,384,444,385,445,393,443,400,436,405,430,407,424,413,419,417,426,419,434,419,437,425,440,431,446,441,452,447,458,450,462,455,462,461,466,467,470,471,476,473,481,478,484,483,484,491,490,491,496,493,504,500,504,505,510,505,518,500,525,496,520,489,531,494,530,486,537,486,540,479,543,470,538,467,531,464,530,455,521,451,515,444,515,436,515,428,510,422,513,416,506,416,505,409,502,402,506,399,512,401,517,402,521,396,526,394,532,393,537,396,542,396,548,391,555,389,562,385,559,376,555,367,553,358,548,350,549,341,542,334,535,327,525,322,518,311,511,307"
+                                    style="opacity:0" />
+                            </a>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Colonna sinistra: descrizione -->
+                <div class="text-content" id="content-panel">
+                    <h1 style="font-family:'Cinzel',serif;font-size:2.5rem;color:#e2b144;margin-bottom:2rem;">L'Italia
+                        prima dell'Unità</h1>
+                    <p>
+                        Prima del 1861, la penisola italiana era suddivisa in numerosi stati indipendenti, ciascuno con
+                        la propria storia, cultura e governo.<br><br>
+                        Clicca su una regione della mappa per scoprire la storia e le caratteristiche di ciascuno stato
+                        preunitario.
+                    </p>
                 </div>
             </div>
-            
-            <!-- Colonna sinistra: descrizione -->
-            <div class="text-content" id="content-panel">
-                <h1 style="font-family:'Cinzel',serif;font-size:2.5rem;color:#e2b144;margin-bottom:2rem;">L'Italia prima dell'Unità</h1>
-                <p>
-                    Prima del 1861, la penisola italiana era suddivisa in numerosi stati indipendenti, ciascuno con
-                    la propria storia, cultura e governo.<br><br>
-                    Clicca su una regione della mappa per scoprire la storia e le caratteristiche di ciascuno stato
-                    preunitario.
-                </p>
-            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Sezione dettagli stato (inizialmente nascosta) -->
-<section id="dettagli-stato" class="section dark-section" style="display:none; background-color:#111;">
-    <div class="section-content">
-        <div class="grid-container">
-            <div class="text-content">
-                <h2 id="dettagli-titolo" class="section-title"></h2>
-                <div id="dettagli-contenuto"></div>
-            </div>
-            <div class="media-content">
-                <div id="dettagli-media" class="image-container"></div>
+    <!-- Sezione dettagli stato (inizialmente nascosta) -->
+    <section id="dettagli-stato" class="section dark-section" style="display:none; background-color:#111;font-size: 1.7rem;
+            line-height: 1.7;">
+        <div class="overlay"></div>
+        <div class="section-content">
+            <div class="grid-container" style="background: rgba(0, 0, 0, 0.7);
+  border: 2px solid #e2b144;">
+                <div class="text-content">
+                    <h2 id="dettagli-titolo" class="section-title"></h2>
+                    <div id="dettagli-contenuto"></div>
+                </div>
+                <div class="media-content">
+                    <!-- Cambiato: image-container ora più verticale/alta -->
+                    <div id="dettagli-media" class="image-container"></div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <script>
         // Contenuti per ogni stato
         const regionContents = {
-            "piemonte": {
-                title: "Regno di Piemonte (inclusa Sardegna)",
+            "sardegna": {
+                title: "Regno di Sardegna",
                 leader: "Vittorio Emanuele II di Savoia",
                 leaderDesc: "Ultimo Re di Sardegna e primo Re d'Italia, noto come 'Il Re Galantuomo' per il suo sostegno alla causa nazionale.",
                 html: `<p>
@@ -160,7 +167,7 @@
                         </div>
                     </div>
                 </div>`,
-                media: `<img src="img/unità/vittorio_emanuele_ii.jpg" alt="Vittorio Emanuele II" style="width:100%;height:100%;object-fit:cover;">`
+                media: `<img src="img/unità/vittorio_emanuele_II.jpeg" alt="Vittorio Emanuele II" style="width:100%;height:100%;object-fit:cover;">`
             },
             "austria": {
                 title: "Regno Lombardo-Veneto (dominio austriaco)",
@@ -192,7 +199,7 @@
                         </div>
                     </div>
                 </div>`,
-                media: `<img src="img/unità/francesco_giuseppe.jpg" alt="Francesco Giuseppe I" style="width:100%;height:100%;object-fit:cover;">`
+                media: `<img src="img/unità/francesco_giuseppe_I.jpg" alt="Francesco Giuseppe I" style="width:100%;height:100%;object-fit:cover;">`
             },
             "pontificio": {
                 title: "Stato Pontificio",
@@ -224,7 +231,7 @@
                         </div>
                     </div>
                 </div>`,
-                media: `<img src="img/unità/pio_ix.jpg" alt="Papa Pio IX" style="width:100%;height:100%;object-fit:cover;">`
+                media: `<img src="img/unità/pio_IX.jpg" alt="Papa Pio IX" style="width:100%;height:100%;object-fit:cover;">`
             },
             "due-sicilie": {
                 title: "Regno delle Due Sicilie",
@@ -256,17 +263,26 @@
                         </div>
                     </div>
                 </div>`,
-                media: `<img src="img/unità/francesco_ii.jpg" alt="Francesco II di Borbone" style="width:100%;height:100%;object-fit:cover;">`
+                media: `<img src="img/unità/francesco_II.jpg" alt="Francesco II di Borbone" style="width:100%;height:100%;object-fit:cover;">`
             }
         };
 
         // Stato -> immagine di sfondo per la sezione
         const regionBackgrounds = {
             "default": "img/unità/presa_roma.jpg",
-            "piemonte": "img/unità/Stendardo_Reale_Sardegna.png",
+            "sardegna": "img/unità/Stendardo_Reale_Sardegna.png",
             "austria": "img/unità/austria.png",
             "pontificio": "img/unità/stato_pontificio.png",
             "due-sicilie": "img/unità/regno_delle_due_sicilie.png"
+        };
+
+        // Nuovo: Stato -> immagine di sfondo per la sezione dettagli-stato
+        const dettagliBackgrounds = {
+            "default": "",
+            "sardegna": "img/unità/regno_di_sardegna_spiegazione.png",
+            "austria": "img/unità/austria_spiegazione.png",
+            "pontificio": "img/unità/stato_pontificio_spiegazione.png",
+            "due-sicilie": "img/unità/regno_delle_due_sicilie_spiegazione.png"
         };
 
         // Cambia lo sfondo della sezione #mappa
@@ -278,21 +294,35 @@
             section.style.backgroundPosition = "center";
         }
 
+        // Nuovo: Cambia lo sfondo della sezione #dettagli-stato
+        function setDettagliBg(regionKey) {
+            const dettagliSection = document.getElementById('dettagli-stato');
+            let img = dettagliBackgrounds[regionKey] || dettagliBackgrounds["default"];
+            if (img) {
+                dettagliSection.style.backgroundImage = `url('${img}')`;
+                dettagliSection.style.backgroundSize = "cover";
+                dettagliSection.style.backgroundPosition = "center";
+            } else {
+                dettagliSection.style.backgroundImage = "";
+            }
+        }
+
         // Mostra/nascondi la sezione dettagli
         function toggleDetailsSection(show) {
             const section = document.getElementById('dettagli-stato');
             section.style.display = show ? 'flex' : 'none';
-            
-            if (show) {
-                // Scorri fino alla sezione dettagli
-                setTimeout(() => {
-                    section.scrollIntoView({ behavior: 'smooth' });
-                }, 300);
-            }
         }
 
         // Inizializza sfondo di default
         setSectionBg("default");
+
+        // Trigger Piemonte selection on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const piemonteRegion = document.querySelector('[data-region="sardegna"]');
+            if (piemonteRegion) {
+                piemonteRegion.click();
+            }
+        });
 
         document.querySelectorAll('.map-region').forEach(region => {
             region.addEventListener('click', function (e) {
@@ -302,46 +332,59 @@
                 const key = this.id;
                 const content = regionContents[key];
                 const panel = document.getElementById('content-panel');
-                
+
                 if (content) {
                     // Aggiorna il pannello principale
                     panel.innerHTML = `
-                        <h1 style="font-family:'Cinzel',serif;font-size:2.5rem;color:#e2b144;margin-bottom:2rem;">${content.title}</h1>
-                        <h3 style="font-family:'Cinzel',serif;color:#e2b144;margin-bottom:1rem;">${content.leader}</h3>
-                        <p style="font-style:italic;margin-bottom:1.5rem;">${content.leaderDesc}</p>
-                        ${content.html}
-                        <button class="btn" onclick="document.getElementById('dettagli-stato').scrollIntoView({behavior:'smooth'})" style="margin-top:2rem;">Scopri di più</button>
-                    `;
-                    
+                <h1 style="font-family:'Cinzel',serif;font-size:3.5rem;color:#e2b144;margin-bottom:2rem;">${content.title}</h1>
+                <h3 style="font-family:'Cinzel',serif;color:#e2b144;margin-bottom:1rem;">${content.leader}</h3>
+                <p style="font-style:italic;margin-bottom:1.5rem;">${content.leaderDesc}</p>
+                ${content.html}
+                <button class="btn" onclick="document.getElementById('dettagli-stato').scrollIntoView({behavior:'smooth'})" style="margin-top:2rem;">Scopri di più</button>
+            `;
+
                     // Aggiorna la sezione dettagli
                     document.getElementById('dettagli-titolo').textContent = content.title;
                     document.getElementById('dettagli-contenuto').innerHTML = content.details;
                     document.getElementById('dettagli-media').innerHTML = content.media;
-                    
-                    // Mostra la sezione dettagli
+
+                    // Mostra la sezione dettagli e il diamante corrispondente
                     toggleDetailsSection(true);
+                    document.querySelector('.side-navigation .side-nav-item[data-section="dettagli-stato"]').style.display = 'block';
                 }
-                
+
                 setSectionBg(key);
+                // Nuovo: aggiorna lo sfondo della sezione dettagli
+                setDettagliBg(key);
             });
         });
 
-        // Resetta tutto quando si clicca su un'area non mappata
-        document.getElementById('mappa').addEventListener('click', function(e) {
-            if (e.target === this) {
-                document.querySelectorAll('.map-region').forEach(r => r.classList.remove('selected'));
-                const panel = document.getElementById('content-panel');
-                panel.innerHTML = `
-                    <h1 style="font-family:'Cinzel',serif;font-size:2.5rem;color:#e2b144;margin-bottom:2rem;">L'Italia prima dell'Unità</h1>
-                    <p>
-                        Prima del 1861, la penisola italiana era suddivisa in numerosi stati indipendenti, ciascuno con
-                        la propria storia, cultura e governo.<br><br>
-                        Clicca su una regione della mappa per scoprire la storia e le caratteristiche di ciascuno stato
-                        preunitario.
-                    </p>
-                `;
-                setSectionBg("default");
-                toggleDetailsSection(false);
+        document.addEventListener('DOMContentLoaded', () => {
+            // Only hide third diamond initially
+            document.querySelector('[data-section="dettagli-stato"]').style.display = 'none';
+
+            // Click handler for updating active state based on scroll position
+            window.addEventListener('scroll', () => {
+                const sections = ['hero', 'mappa', 'dettagli-stato'];
+                const currentSection = sections.find(section => {
+                    const element = document.getElementById(section);
+                    if (!element || element.style.display === 'none') return false;
+                    const rect = element.getBoundingClientRect();
+                    return rect.top <= 100 && rect.bottom >= 100;
+                });
+
+                if (currentSection) {
+                    document.querySelectorAll('.side-nav-item').forEach(item => {
+                        item.classList.remove('active');
+                    });
+                    document.querySelector(`[data-section="${currentSection}"]`).classList.add('active');
+                }
+            });
+
+            // Existing piemonte trigger
+            const piemonteRegion = document.querySelector('[data-region="sardegna"]');
+            if (piemonteRegion) {
+                piemonteRegion.click();
             }
         });
     </script>
